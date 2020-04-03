@@ -1,4 +1,5 @@
 Descripcion.
+
 $ E-commerce de componentes de pc de alta gama.
 
 $ Dirigido para gente joven/adulto, que se dedique al mundo de diseño, informatica y gaming.
