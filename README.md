@@ -72,7 +72,7 @@ Estos sitios webs fueron usados como referencia por los productos que ofrecen, s
 
 - [Detalle del Producto.](https://marvelapp.com/e3c473e/screen/68072311)
 
-- Carrito de Compras.
+- [Carrito de Compras.](https://marvelapp.com/e3c473e/screen/68072341)
 
 - Formulario de Registro.
 
