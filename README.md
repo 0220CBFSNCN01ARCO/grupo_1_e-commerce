@@ -74,7 +74,7 @@ Estos sitios webs fueron usados como referencia por los productos que ofrecen, s
 
 - [Carrito de Compras.](https://marvelapp.com/e3c473e/screen/68072341)
 
-- Formulario de Registro.
+- [Formulario de Registro.](https://marvelapp.com/project/4835963/screen/68072415)
 
 - Formulario de Carga del Producto (Para el Administrador).
 ## Logo 
