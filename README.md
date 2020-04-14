@@ -68,9 +68,9 @@ Estos sitios webs fueron usados como referencia por los productos que ofrecen, s
 
 ## Boceto de la pagina web
 
--  [Home.](https://marvelapp.com/e3c473e)
+- [Home.](https://marvelapp.com/e3c473e/screen/67886587)
 
-- Detalle del Producto.
+- [Detalle del Producto.](https://marvelapp.com/e3c473e/screen/68072311)
 
 - Carrito de Compras.
 
