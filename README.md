@@ -131,7 +131,7 @@ Estos sitios webs fueron usados como referencia por los productos que ofrecen, s
  - **Otros Bocetos:**
 	 - [Cuenta administrador (Productos)](https://marvelapp.com/e3c473e/screen/68346535)
 	 - [Cuenta Administrador (Seguimientos de ventas y acciones)](https://marvelapp.com/e3c473e/screen/68348248)
-	
+	 - [Nexus Craft (Lista)](https://marvelapp.com/e3c473e/screen/68324768)
 
 ## Logo
 
