@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+/* Variables */
+
+:root {
+  --blue: #00132B;
+  --light-blue: #8ABAD3;
+  --black: #000000;
+  --light-blue2: #004450;
+}
