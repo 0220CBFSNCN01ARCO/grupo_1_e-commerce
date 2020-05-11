@@ -9,3 +9,15 @@
   --black: #000000;
   --light-blue2: #004450;
 }
+.main-header{
+  background-color: var(--blue);
+}
+.main-header-home img{
+  width: 100%;
+}
+.search-form_input{
+ display:none;
+}
+.main-navbar{
+  display: none;
+}
