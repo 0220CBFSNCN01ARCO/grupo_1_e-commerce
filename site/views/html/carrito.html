@@ -16,48 +16,23 @@
 <body>
     <!--Header-->
     <header class="main-header">
-        <div class="container ">
-            <div class="row align-items-center ">
-
-                <button class="col-1 btn-toggle-navbar ">
-                    <i class="fas fa-bars "></i>
-                </button>
-
-                <div class="col-4 col-md-2 ">
-                    <a href="/ " class="main-header-home">
-                        <img src="../../public/images/nexus.png " alt="logo ">
-                    </a>
-                </div>
-
-                <div class="col-1 col-md-6" id="search">
-                    <form action="" method="get" class="search-form">
-                        <input type="text" name="search" placeholder="Buscar productos, marcas y más" class="search-form_input">
-                        <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
-                    </form>
-                </div>
-
-                <div class="col-3 col-md-2 ">
-                    <a href="# " class="main-header-home ">
-                        <img src="../../public/images/login.png " alt="login ">
-                    </a>
-                </div>
-
-                <div class="col-3 col-md-2 ">
-                    <a href="# " class="main-header-home ">
-                        <img src="../../public/images/carrito.png " alt="carrito ">
-                    </a>
-                </div>
-            </div>
-
-
-            <nav class="main-navbar ">
-                <ul class="nav-bar ">
-                    <li><a href="# ">Producto</a></li>
-                    <li><a href="# ">NexusCraft</a></li>
-                    <li><a href="# ">Ayuda</a></li>
-                    <li><a href="# ">Mi cuenta</a></li>
-                </ul>
-            </nav>
+        <div class="container contenedor ">
+            <button class="btn-toggle-navbar class-buttons">
+				<i class="fas fa-bars"></i>
+            </button>
+            <a href="#" class="main-header_home-link">
+                <img src="../../public/images/nexus.png" alt="logo">
+            </a>
+            <form action="" method="get" class="search-form">
+                <input type="text" name="search" placeholder="Buscar productos, marcas y más" class="search-form_input">
+                <button type="submit" class="search-form_button class-buttons"><i class="fas fa-search"></i></button>
+            </form>
+            <a href="#" class="main-header_home-link class-icons ">
+                <i class="fas fa-user-circle"></i>
+            </a>
+            <a href="#" class="main-header_home-link class-icons" >
+                <i class="fas fa-shopping-cart"></i>
+            </a>
         </div>
     </header>
 </body>
