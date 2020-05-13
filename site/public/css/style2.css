@@ -13,7 +13,7 @@
     /* Header */
   
 .logo {
-  width: 30vw;
+  width: 26vw;
 }
 .search-form_input {
   display: none;
@@ -25,4 +25,10 @@
 .navbar-toggler {
   border: none;
   color: var(--light-blue);
+}
+.navbar-toggler-icon {
+  width: 8vw;
+}
+.icon-design {
+  margin-top: 4vw;
 }
