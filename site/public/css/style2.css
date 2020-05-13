@@ -4,25 +4,25 @@
     /* Variables */
   
 :root {
-  --blue: #00132B;
+  --color1: #00132B;
   --light-blue: #8ABAD3;
   --black: #000000;
   --light-blue2: #004450;
 }
   
     /* Header */
+    .navbar-brand img{
+      width: 100px;
+    }
   
-.logo {
-  width: 30vw;
-}
-.search-form_input {
-  display: none;
-}
-.navbar-toggler-icon {
-  border: none;
-  color: var(--light-blue);
-}
-.navbar-toggler {
-  border: none;
-  color: var(--light-blue);
-}
+    .dropdown-menu{
+      background-color:var(--black)!important;
+    }
+    
+    .dropdown-item{
+      color: var(--light-blue)!important;
+    }
+    .bg-nav{
+      background-color: var(--color1);
+    }
+
