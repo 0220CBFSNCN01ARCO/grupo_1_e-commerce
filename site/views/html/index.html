@@ -2,65 +2,93 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../public/css/style2.css">
-    <title>Carrito de compras</title>
-      <!--Bootstrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" 
-        crossorigin="anonymous"></script>
-    <!--Font Awesome-->
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../public/css/style2.css">
+  <title>Home</title>
+  <!--Bootstrap-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
 </head>
+
 <body>
-  <header class="main-header" style="background-color: #00132B;">
-        <a class="cont-icon navbar-brand navbar-cart pull-right visible-xs">
-          <i class="fa fa-shopping-cart icon-design" style="margin-left: 2vw;"></i>
-        </a>
-        <a class="cont-icon navbar-brand navbar-cart pull-right visible-xs">
-          <i class="fa fa-user-circle icon-design" style="margin-left: 2vw;"></i>
-        </a>
-        <a class="cont-icon navbar-brand navbar-cart pull-right visible-xs">
-          <form action="" method="get" class="search-form">
-            <input type="text" name="search" placeholder="Buscar productos" class="search-form_input">
-              <button type="submit" class="search-form_button">
-                <i class="fa fa-search icon-design"></i>
-              </button>
-          </form>
-        </a>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" style="color: #8ABAD3; border: none;">
-        <span class="navbar-toggler-icon"></span>
+  <header class="main-header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-nav">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars"></i>
       </button>
-      <a class="navbar-brand pull-left visible-xs" href="#">
-        <img class="logo" src="../../public/images/nexus.png" alt="Nexus">
+      <a class="navbar-brand" href="">
+        <img src="../../public/images/nexus.png" alt="Logo">
       </a>
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Productos</a>
+      <a href="">
+        <i class="fas fa-search"></i>
+      </a>
+      <a href="">
+        <i class="fas fa-user-circle"></i>
+      </a>
+      <a href="">
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+      <div  class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Productos
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item " href="#">Teclados</a>
+              <a class="dropdown-item" href="#">Procesadores</a>
+            </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Nexuscraft</a>
+            <a class="nav-link" href="">NexusCraft</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Ayuda</a>
+            <a class="nav-link" href="">Ayuda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Mi cuenta</a>
+            <a class="nav-link" href="">Mi Cuenta</a>
           </li>
         </ul>
       </div>
-        
     </nav>
-  </header>
+    <footer class="footer">
+        <img src="../../public/images/logo-footer.png" alt="logo" id="logo-footer">
+    <ul class="lista-1">
+        <li><a href="#" style="text-decoration: none;">Incio</a></li>
+        <li><a href="#" style="text-decoration: none;">Productos</a></li>
+        <li><a href="#" style="text-decoration: none;">NexusCraft</a></li>
+        <li><a href="#" style="text-decoration: none;">Ayuda</a></li>
+        <li><a href="#" style="text-decoration: none;"><b>Contacto</b></a></li>
+
+    </ul>
+    <ul class="lista-2">
+        <li><a href="#" style="text-decoration: none;">Mi cuenta</a></li>
+        <li><a href="#" style="text-decoration: none;">Perfil</a></li>
+        <li><a href="#" style="text-decoration: none;">Mi pedido</a></li>
+        <li><a href="#" style="text-decoration: none;">Mis preguntas</a></li>
+        <li><a href="#" style="text-decoration: none;">¿Quienes somos?</a></li>
+        <li><a href="#" style="text-decoration: none;"><b>¿Donde estamos?</b></a></li>
+
+    </ul>
+       
+    </footer>
+</div>
 </body>
+
 </html>

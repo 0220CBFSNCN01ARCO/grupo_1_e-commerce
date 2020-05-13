@@ -4,31 +4,60 @@
     /* Variables */
   
 :root {
-  --blue: #00132B;
+  --color1: #00132B;
   --light-blue: #8ABAD3;
   --black: #000000;
   --light-blue2: #004450;
 }
   
     /* Header */
+    .navbar-brand img{
+      width: 100px;
+    }
   
-.logo {
-  width: 26vw;
+    .dropdown-menu{
+      background-color:var(--black)!important;
+    }
+    
+    .dropdown-item{
+      color: var(--light-blue)!important;
+    }
+    .bg-nav{
+      background-color: var(--color1);
+    }
+
+
+/*Footer*/
+ .footer{
+   display: flex;
+   background-color:#00132B;
+   margin-top: 15px;
+   font-size: 4vw;
+ }
+
+ #logo-footer{
+   width: 12%;
+   margin-top: 3vh;
+   margin-left: 3vh;
+   padding-bottom: 3vh;
+ }
+
+.lista-1{
+  margin-top: 7vw;
+  padding-bottom: 6vw;
 }
-.search-form_input {
-  display: none;
+
+.lista-2{
+  margin-top: 7vw;
+  padding-bottom: 6vw;
 }
-.navbar-toggler-icon {
-  border: none;
-  color: var(--light-blue);
+
+ ul{
+  list-style: none;
+
 }
-.navbar-toggler {
-  border: none;
-  color: var(--light-blue);
+
+li a{
+  color: white;
 }
-.navbar-toggler-icon {
-  width: 8vw;
-}
-.icon-design {
-  margin-top: 4vw;
-}
+ 
