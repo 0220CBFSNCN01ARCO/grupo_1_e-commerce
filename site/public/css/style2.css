@@ -26,3 +26,39 @@
   border: none;
   color: var(--light-blue);
 }
+
+
+/*Footer*/
+ .footer{
+   display: flex;
+   background-color:#00132B;
+   margin-top: 15px;
+   font-size: 4vw;
+ }
+
+ #logo-footer{
+   width: 12%;
+   margin-top: 3vh;
+   margin-left: 3vh;
+   padding-bottom: 3vh;
+ }
+
+.lista-1{
+  margin-top: 7vw;
+  padding-bottom: 6vw;
+}
+
+.lista-2{
+  margin-top: 7vw;
+  padding-bottom: 6vw;
+}
+
+ ul{
+  list-style: none;
+
+}
+
+li a{
+  color: white;
+}
+ 
