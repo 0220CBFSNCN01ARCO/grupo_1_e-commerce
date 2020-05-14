@@ -6,6 +6,7 @@ body {
 
 .titulo-formulario {
     background-color: #000000;
+    color: #8ABAD3;
     width: 56vw;
     font-size: 34px;
     margin-top: 5vw;
@@ -41,6 +42,7 @@ body {
 
 #crear-cuenta {
     margin-left: 2vh;
+    color: #8ABAD3;
 }
 
 .iconos {
@@ -48,4 +50,44 @@ body {
     margin-top: 2vw;
     margin-left: 2vw;
     color: #000000;
+}
+
+@media (min-width: 600px) {
+    .titulo-formulario{
+        width: 32vw;
+        border-radius: 1vw;
+    }
+    #inputsFormulario{
+        width: 32vw;
+    }
+
+    .container{
+        display: flex;
+    }
+
+    #ingresar{
+        display: block;
+        position: relative;
+        height: 5vw;
+        margin-top: 27vh;
+        margin-left: 14vh;
+    }
+
+    
+}
+
+@media (min-width: 1200px) {
+    .titulo-formulario{
+        border-radius: 1.1vh;
+    }
+    .formulario{
+        margin-left: -39vh
+    }
+    .iconos{
+        font-size: 8vh;
+    }
+    #ingresar{
+      width: 7vw;
+      height: 6vh;  
+    }
 }
