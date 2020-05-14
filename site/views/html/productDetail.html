@@ -2,230 +2,248 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../../public/css/stylecarrito.css">
-  <link rel="stylesheet" href="../../public/css/style2.css">
-  <title>Carrito</title>
-  <!--Bootstrap-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
-  <!--Font Awesome-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-</head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../public/css/stylecarrito.css">
+    <link rel="stylesheet" href="../../public/css/style2.css">
+    <link rel="stylesheet" href="../../public/css/productDeTail.css">
+    <title>Carrito</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
 <body>
-  <header class="main-header">
-    <div class="pc">
-      <div class="container-fluid contenedor-header">
-        <a class="brand" href="">
-          <img src="../../public/images/nexus.png" alt="Logo">
-        </a>
-        <form action="" method="get" class="search-form mx-auto">
-          <input type="text" name="search" placeholder="Buscar productos, marcas y más" class="search-form_input">
-          <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
-        </form>
-        <a class="nav-icons mx-auto" href="">
-          <i class="fas fa-user-circle"></i>
-          <a class="nav-icons mx-auto" href="">
-            <i class="fas fa-shopping-cart"></i>
-          </a>
-      </div>
-      <nav>
-        <ul class="nav bg-nav nav-fill">
-          <li class="nav-item margin-nav dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
+    <header class="main-header">
+        <div class="pc">
+            <div class="container-fluid contenedor-header">
+                <a class="brand" href="">
+                    <img src="../../public/images/nexus.png" alt="Logo">
+                </a>
+                <form action="" method="get" class="search-form mx-auto">
+                    <input type="text" name="search" placeholder="Buscar productos, marcas y más" class="search-form_input">
+                    <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+                </form>
+                <a class="nav-icons mx-auto" href="">
+                    <i class="fas fa-user-circle"></i>
+                    <a class="nav-icons mx-auto" href="">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+            </div>
+            <nav>
+                <ul class="nav bg-nav nav-fill">
+                    <li class="nav-item margin-nav dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Productos
             </a>
-            <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-              <a class="dropdown-item " href="#">Perifericos</a>
-              <a class="dropdown-item" href="#">Motherboard</a>
-              <a class="dropdown-item " href="#">Procesador</a>
-              <a class="dropdown-item" href="#">Memorias ram</a>
-              <a class="dropdown-item " href="#">Almacenamiento</a>
-              <a class="dropdown-item" href="#">Fuente</a>
-              <a class="dropdown-item " href="#">Coolers</a>
-              <a class="dropdown-item" href="#">Gabinete</a>
-            </div>
-          </li>
-          <li class="nav-item margin-nav">
-            <a class="nav-link" href="">NexusCraft</a>
-          </li>
-          <li class="nav-item margin-nav">
-            <a class="nav-link " href="">Ayuda</a>
-          </li>
-          <li class="nav-item margin-nav">
-            <a class="nav-link" href="">Mi Cuenta</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <nav class="navbar navbar-dark bg-nav phone">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item " href="#">Perifericos</a>
+                            <a class="dropdown-item" href="#">Motherboard</a>
+                            <a class="dropdown-item " href="#">Procesador</a>
+                            <a class="dropdown-item" href="#">Memorias ram</a>
+                            <a class="dropdown-item " href="#">Almacenamiento</a>
+                            <a class="dropdown-item" href="#">Fuente</a>
+                            <a class="dropdown-item " href="#">Coolers</a>
+                            <a class="dropdown-item" href="#">Gabinete</a>
+                        </div>
+                    </li>
+                    <li class="nav-item margin-nav">
+                        <a class="nav-link" href="">NexusCraft</a>
+                    </li>
+                    <li class="nav-item margin-nav">
+                        <a class="nav-link " href="">Ayuda</a>
+                    </li>
+                    <li class="nav-item margin-nav">
+                        <a class="nav-link" href="">Mi Cuenta</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <nav class="navbar navbar-dark bg-nav phone">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa fa-bars"></i>
       </button>
-      <a class="navbar-brand mr-0" href="">
-        <img src="../../public/images/nexus.png" alt="Logo">
-      </a>
-      <a class="nav-icons" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" href="">
-        <i class="fas fa-search"></i>
-      </a>
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header border-bottom-0">
-              <form class="modal-form aling-center">
-                <input type="search" placeholder="Search" aria-label="Search">
-                <button type="submit"><i class="fas fa-search"></i></button>
-              </form>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <a class="navbar-brand mr-0" href="">
+                <img src="../../public/images/nexus.png" alt="Logo">
+            </a>
+            <a class="nav-icons" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" href="">
+                <i class="fas fa-search"></i>
+            </a>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header border-bottom-0">
+                            <form class="modal-form aling-center">
+                                <input type="search" placeholder="Search" aria-label="Search">
+                                <button type="submit"><i class="fas fa-search"></i></button>
+                            </form>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <a class="nav-icons" href="">
-        <i class="fas fa-user-circle"></i>
-        <a class="nav-icons" href="">
-          <i class="fas fa-shopping-cart"></i>
-        </a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+            <a class="nav-icons" href="">
+                <i class="fas fa-user-circle"></i>
+                <a class="nav-icons" href="">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Productos
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item " href="#">Perifericos</a>
-                <a class="dropdown-item" href="#">Motherboard</a>
-                <a class="dropdown-item " href="#">Procesador</a>
-                <a class="dropdown-item" href="#">Memorias ram</a>
-                <a class="dropdown-item " href="#">Almacenamiento</a>
-                <a class="dropdown-item" href="#">Fuente</a>
-                <a class="dropdown-item " href="#">Coolers</a>
-                <a class="dropdown-item" href="#">Gabinete</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="">NexusCraft</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="">Ayuda</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="">Mi Cuenta</a>
-            </li>
-          </ul>
-        </div>
-    </nav>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item " href="#">Perifericos</a>
+                                <a class="dropdown-item" href="#">Motherboard</a>
+                                <a class="dropdown-item " href="#">Procesador</a>
+                                <a class="dropdown-item" href="#">Memorias ram</a>
+                                <a class="dropdown-item " href="#">Almacenamiento</a>
+                                <a class="dropdown-item" href="#">Fuente</a>
+                                <a class="dropdown-item " href="#">Coolers</a>
+                                <a class="dropdown-item" href="#">Gabinete</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">NexusCraft</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Ayuda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Mi Cuenta</a>
+                        </li>
+                    </ul>
+                </div>
+        </nav>
 
-  </header>
-  <main>
-      <article>
-          <div class="container">
-              <div>
-                  <h3 id="title-product">Producto #1</h3>
-              </div>
+    </header>
+    <main>
+        <article>
+            <div class="container">
+                <div>
+                    <h3 id="title-product">Producto #1</h3>
+                </div>
                 <div class="thinBorder"></div>
-              <div class="raw">
-                <div id="carouselIndicators" class="carousel slide col-6-md col-12-xs" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                    <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="../../public/images/placeholder.png" alt="Producto img1">
+                <div class="row">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../../public/images/placeholder.png" class="d-block w-100" alt="producto">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../../public/images/placeholder.png" class="d-block w-100" alt="producto">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../../public/images/placeholder.png" class="d-block w-100" alt="producto">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../../public/images/placeholder.png" alt="Producto img2">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../../public/images/placeholder.png" alt="Producto img3">
-                    </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                    </a>
-                </div>
-                <div class="card-body col-6-md col-12-xs">
-                  <h3>Precio Nexus</h3>
-                  <h4>$12.500</h4>
-                  <div class="thinBorder"></div>
-                  <h3>Precio Lista</h3>
-                  <h4>$15.000</h4>
-                </div>
-                <div class="card mt-4">
-                  <div class="card-body">
-                    <h3 class="card-title">Producto #1</h3>
-                    <h4>Descripcion</h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
-                    <h4>Especificaiones</h4>
-                    <p class="card-text">-Lorem ipsum dolor sit ame</p>
-                    <p class="card-text">-consectetur adipisicing elit</p>
-                    <p class="card-text">-Sapiente dicta fugit fugiat hic aliquam itaque facere</p>
-                    <p class="card-text">-soluta Totam id dolores sint aperiam sequi pariatur</p>
-                    <p class="card-text">-praesentium animi perspiciatis molestias iure, ducimus</p>
-                    <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
-                    4.0 stars
-                  </div>
-                  <div class="banner"></div>
-            </div>
-          </div>
-      </article>
-  </main>
-  <footer class="footer">
-    <img src="../../public/images/logo-footer.png" alt="logo" id="logo-footer">
-    <ul class="lista-1">
-        <li><a href="#" style="text-decoration: none;">Incio</a></li>
-        <li><a href="#" style="text-decoration: none;">Productos</a></li>
-        <li><a href="#" style="text-decoration: none;">NexusCraft</a></li>
-        <li><a href="#" style="text-decoration: none;">Ayuda</a></li>
-        <li><a href="#" style="text-decoration: none;"><b>Contacto</b></a></li>
-    </ul>
-    <ul class="lista-2">
-        <li><a href="#" style="text-decoration: none;">Mi cuenta</a></li>
-        <li><a href="#" style="text-decoration: none;">Perfil</a></li>
-        <li><a href="#" style="text-decoration: none;">Mi pedido</a></li>
-        <li><a href="#" style="text-decoration: none;">Mis preguntas</a></li>
-        <li><a href="#" style="text-decoration: none;">¿Quienes somos?</a></li>
-        <li><a href="#" style="text-decoration: none;"><b>¿Donde estamos?</b></a></li>
+                    <div class="card-body col-6-md col-12-xs">
+                        <h3>Precio Nexus</h3>
+                        <h4>$12.500</h4>
+                        <div class="thinBorder"></div>
+                        <h3>Precio Lista</h3>
+                        <h4>$15.000</h4>
+                        <div class="thinBorder"></div>
+                        <i id="icono" class="fa fa-credit-card" aria-hidden="true"></i>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Seleccione su metodo de pago
+                          </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Tarjeta debito</a>
+                                <a class="dropdown-item" href="#"> Tarjeta credito</a>
+                                <a class="dropdown-item" href="#">RapiPago</a>
+                            </div>
+                        </div>
 
-    </ul>
-    <div class="form-group mx-sm-3 mb-2" id="input-footer">
-      <label for="exampleInputEmail1" class="label-footer">Recibe nuestras promociones!</label>
-      <input type="email" class="form-control" id="input-footer" placeholder="Correo electronico">
+                        <i id="icono" class="fas fa-truck" aria-hidden="true"></i>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Seleccione su metodo de envio
+                        </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Camion</a>
+                                <a class="dropdown-item" href="#"> Avion</a>
+                                <a class="dropdown-item" href="#">Local</a>
+                            </div>
+                        </div>
+                        <td id="model-input">
+                            <input id="cantidad" type="number" class="form-control cantidad" min="1" value="2" style="width: 9vw;font-size: 2vw; margin-top: 3vh;">
+                        </td>
+                        <button id="comprar" type="button" class="btn btn-outline-dark">Dark</button>
+                    </div>
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <h3 class="card-title">Producto #1</h3>
+                            <h4>Descripcion</h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
+                            <h4>Especificaiones</h4>
+                            <p class="card-text">-Lorem ipsum dolor sit ame</p>
+                            <p class="card-text">-consectetur adipisicing elit</p>
+                            <p class="card-text">-Sapiente dicta fugit fugiat hic aliquam itaque facere</p>
+                            <p class="card-text">-soluta Totam id dolores sint aperiam sequi pariatur</p>
+                            <p class="card-text">-praesentium animi perspiciatis molestias iure, ducimus</p>
+                            <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span> 4.0 stars
+                        </div>
+                        <div class="banner"></div>
+                    </div>
+                </div>
+        </article>
+    </main>
+    <footer class="footer">
+        <img src="../../public/images/logo-footer.png" alt="logo" id="logo-footer">
+        <ul class="lista-1">
+            <li><a href="#" style="text-decoration: none;">Incio</a></li>
+            <li><a href="#" style="text-decoration: none;">Productos</a></li>
+            <li><a href="#" style="text-decoration: none;">NexusCraft</a></li>
+            <li><a href="#" style="text-decoration: none;">Ayuda</a></li>
+            <li><a href="#" style="text-decoration: none;"><b>Contacto</b></a></li>
+        </ul>
+        <ul class="lista-2">
+            <li><a href="#" style="text-decoration: none;">Mi cuenta</a></li>
+            <li><a href="#" style="text-decoration: none;">Perfil</a></li>
+            <li><a href="#" style="text-decoration: none;">Mi pedido</a></li>
+            <li><a href="#" style="text-decoration: none;">Mis preguntas</a></li>
+            <li><a href="#" style="text-decoration: none;">¿Quienes somos?</a></li>
+            <li><a href="#" style="text-decoration: none;"><b>¿Donde estamos?</b></a></li>
+
+        </ul>
+        <div class="form-group mx-sm-3 mb-2" id="input-footer">
+            <label for="exampleInputEmail1" class="label-footer">Recibe nuestras promociones!</label>
+            <input type="email" class="form-control" id="input-footer" placeholder="Correo electronico">
         </div>
-    <button type="submit" class="btn btn-primary mb-2" id="boton-footer">Aceptar</button>
-    <div class="iconos-footer">
-      <i class="fa fa-instagram" aria-hidden="true"></i>
-      <i class="fa fa-twitter-square" aria-hidden="true"></i>
-      <i class="fa fa-youtube" aria-hidden="true"></i>
-      <i class="fa fa-envelope-o" aria-hidden="true"></i>
-  </div>
-</footer>
+        <button type="submit" class="btn btn-primary mb-2" id="boton-footer">Aceptar</button>
+        <div class="iconos-footer">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <i class="fa fa-twitter-square" aria-hidden="true"></i>
+            <i class="fa fa-youtube" aria-hidden="true"></i>
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+        </div>
+    </footer>
 
 </body>
+
 </html>
