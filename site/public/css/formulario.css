@@ -1,0 +1,51 @@
+body {
+    background-image: url("../images/fondo-formulario.jpeg");
+    background-repeat: no-repeat;
+    background-size: 105vw 118vh;
+}
+
+.titulo-formulario {
+    background-color: #000000;
+    width: 56vw;
+    font-size: 34px;
+    margin-top: 5vw;
+    margin-left: 2vw;
+    padding-left: 2vw;
+    border-radius: 2vw;
+}
+
+.nombre {
+    margin-left: 2vw;
+    color: white;
+}
+
+#mensajeDebajoDeInput {
+    margin-left: 2vw;
+}
+
+.correoElectronico {
+    margin-left: 2vw;
+    margin-top: 2vh;
+    color: white;
+}
+
+#contraseña {
+    color: white;
+    margin-left: 2vh;
+}
+
+#inputsFormulario {
+    width: 56vw;
+    margin-left: 2vw;
+}
+
+#crear-cuenta {
+    margin-left: 2vh;
+}
+
+.iconos {
+    font-size: 9vw;
+    margin-top: 2vw;
+    margin-left: 2vw;
+    color: #000000;
+}
