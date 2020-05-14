@@ -157,3 +157,7 @@ Estos sitios webs fueron usados como referencia por los productos que ofrecen, s
 -  [Fira Mono](https://fonts.google.com/specimen/Fira+Mono?query=fira%20m)
 
 -  [Lato](https://fonts.google.com/specimen/Lato?query=lat)
+
+## Trello
+
+- [Trello](https://trello.com/b/VrFQkiR4/grupo-1-proyecto-dh)
