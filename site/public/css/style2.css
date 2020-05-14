@@ -6,13 +6,6 @@
 /* Variables */
 
 :root {
-<<<<<<< HEAD
-    --color1: #00132B;
-    --light-blue: #8ABAD3;
-    --black: #000000;
-    --light-blue2: #004450;
-}
-=======
   --color1: #00132B;
   --light-blue: #8ABAD3;
   --black: #000000;
@@ -58,7 +51,6 @@
       opacity: 0.9;
 
     }
->>>>>>> 8e4e3f6e10f5b618d632b09026c86cded8534841
 
 
 /* Header */
@@ -155,12 +147,6 @@
 ul {
     list-style: none;
 }
-<<<<<<< HEAD
-
-li a {
-    color: white;
-}
-=======
  
  @media (min-width: 600px) {
   .phone{
@@ -262,4 +248,3 @@ li a {
 }
 
 
->>>>>>> 8e4e3f6e10f5b618d632b09026c86cded8534841
