@@ -12,6 +12,7 @@
 
   body{
     background-color: var(--light-blue2)!important;
+    color: var(--light-blue);
   }
     /* Header */
     .pc{
