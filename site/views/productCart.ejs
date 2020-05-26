@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../public/css/stylecarrito.css">
+    <link rel="stylesheet" href="../../public/css/style2.css">
+    <title>Carrito</title>
+    <%- include('./partials/head.ejs') %>
+
+</head>
+
+<body>
+    <% include('./partials/header.ejs') %>
+        <!--Carrito-->
+        <main>
+            <div class="container">
+                <div class="row mt-3">
+                    <div class="col">
+                        <h2 style="font-size: 3vw">Carrito de compras</h2>
+                        <form id="procesar-pago" action="#" method="POST">
+                            <div id="carrito">
+                                <table class="table table-sm" id="lista-compra">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="text-car"></th>
+                                            <th scope="col" class="text-car">Productos</th>
+                                            <th scope="col" class="text-car">Cantidad</th>
+                                            <th scope="col" class="text-car text-car-none" style="padding-left: 2vw; position: absolute;">Precio</th>
+                                            <th scope="col" class="text-car">Subtotal</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row"><img src="../../public/images/placeholder.png" alt="comp" class="text-car-none img-car"></th>
+                                            <td class="text-car" id="centrado">Memoria Ram Ddr4 16gb</td>
+                                            <td class="text-car text-car-none" style="position: absolute; padding-top: 5.5vw;">$4200</td>
+                                            <td id="model-input">
+                                                <input type="number" class="form-control cantidad" min="1" value="1" style="width: 9vw;font-size: 2vw;">
+                                            </td>
+                                            <td class="text-car" id="centrado">$4200</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><img src="../../public/images/placeholder.png" alt="comp" class="text-car-none img-car"></th>
+                                            <td class="text-car" id="centrado">MSI X470 Gaming Plus</td>
+                                            <td class="text-car text-car-none" style="position: absolute; padding-top: 5.5vw">$5000</td>
+                                            <td id="model-input">
+                                                <input type="number" class="form-control cantidad" min="1" value="2" style="width: 9vw;font-size: 2vw;">
+                                            </td>
+                                            <td class="text-car" id="centrado">$10000</td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="3" scope="col" class="text-right" id="text-total">Total</th>
+                                            <th scope="col" id="model-input-total">
+                                                <input id="total" name="monto">
+                                            </th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>
