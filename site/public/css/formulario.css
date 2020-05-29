@@ -53,41 +53,37 @@ body {
 }
 
 @media (min-width: 600px) {
-    .titulo-formulario{
+    .titulo-formulario {
         width: 32vw;
         border-radius: 1vw;
     }
-    #inputsFormulario{
+    #inputsFormulario {
         width: 32vw;
     }
-
-    .container{
+    .container {
         display: flex;
     }
-
-    #ingresar{
+    #ingresar {
         display: block;
         position: relative;
         height: 5vw;
         margin-top: 27vh;
         margin-left: 14vh;
     }
-
-    
 }
 
 @media (min-width: 1200px) {
-    .titulo-formulario{
+    .titulo-formulario {
         border-radius: 1.1vh;
     }
-    .formulario{
+    .formulario {
         margin-left: -39vh
     }
-    .iconos{
+    .iconos {
         font-size: 8vh;
     }
-    #ingresar{
-      width: 7vw;
-      height: 6vh;  
+    #ingresar {
+        width: 7vw;
+        height: 6vh;
     }
 }
