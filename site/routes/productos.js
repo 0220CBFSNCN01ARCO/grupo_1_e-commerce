@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var controllerProductos = require("../controllers/controllerProductos");
 
-/* GET home page. */
+/* Rutas productos  */
 router.get('/', controllerProductos.Listado_Productos);
 router.get('/create', controllerProductos.Creacion_Productos);
 router.get('/:id', controllerProductos.Detalles_productos);

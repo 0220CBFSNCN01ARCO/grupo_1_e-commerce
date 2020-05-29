@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+        /* Variables */
+    
+:root {
+   --color1: #00132B;
+   --color2: #8ABAD3;
+   --color3: #000000;
+   --color4: rgba(0,68,80,0.18);
+}
+body{
+    background-color: var(--color4)!important ;
+    
+}
+.bgColorBlue{
+    background-color: var(--color1)!important ;
+}
+#brand{
+    width: 14em;
+    color: var(--color2);
+    font-size: 1rem;
+}
+#brand img{
+    width: 45%;
+}
+.nav-link{
+    color: var(--color2)!important;
+}
+#tabla{
+    font-size: .6em;
+}
+#iconos-tabla{
+   font-size: 100%;
+}
+#LinkFooter{
+    color: var(--color2);
+}
+footer{
+    color: black;
+}
+
+

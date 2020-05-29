@@ -1,6 +1,8 @@
 const cuentaAdm = {
-    CargarProductos: function(req,res){
-        res.render('cargaDeProductoAdm', { title: ` cuenta de administrador - Seccion: Cargar del Producto` }); 
+    Menu: function(req,res){
+        res.render('AdminConsole', {
+            'titulo': "Hola"
+        });; 
     }
 }
 module.exports = cuentaAdm;
