@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Menu </title>
+    <link rel="stylesheet" href="css/admin.css">
+    <%- include('./partials/head.ejs') %>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bgColorBlue">
+            <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a href="/" class="navbar-brand mr-auto" id="brand">
+                <img src="/images/nexus.png" class="d-inline-block mr-1" alt=""> Administrador
+            </a>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> Productos</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#"> Ventas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> Delivery</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#"> Agregar producto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-user-circle"> Desconectar </i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container mt-3">
+        <h5 class="text-center mb-3">Productos</h5>
+
+        <div class="table-responsive-lg  " id="tabla">
+            <table class="table table-bordered table-dark bgColorBlue ">
+                <thead class=" text-center">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">NAME</th>
+                        <th scope="col">PRICE</th>
+                        <th scope="col">STOCK</th>
+                        <th scope="col">ACCIONS</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    <th scope="row" class="align-middle">1</th>
+                    <td class="align-middle">Rx 590 Gigabyte</td>
+                    <td class="align-middle">$25.000</td>
+                    <td class="align-middle">3</td>
+                    <td class="align-middle" id="iconos-tabla">
+                        <a href="">
+                            <i class="fas fa-eye-slash"></i>
+                        </a>
+                        <a href="">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <a href="producto/1/delete">
+                            <i class="fas fa-trash-alt"></i>
+                        </a>
+                    </td>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <footer class="page-footer font-small blue fixed-bottom bgColorBlue">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright -
+            <a href="/" id="LinkFooter"> Nexus.com</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+</body>
+
+</html>
