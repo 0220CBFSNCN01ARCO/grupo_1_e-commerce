@@ -108,6 +108,10 @@ body {
     color: var(--light-blue);
 }
 
+#logo-footer {
+    display: none;
+}
+
 
 /*Tablet*/
 
@@ -187,6 +191,9 @@ li a {
     .footer {
         font-size: 2vh;
     }
+    #logo-footer {
+        display: block;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -212,5 +219,11 @@ li a {
     }
     .carousel-item img {
         height: 30vw;
+    }
+    #logo-footer {
+        display: block;
+        width: 11vw;
+        height: 22vw;
+        margin-left: 85px;
     }
 }
