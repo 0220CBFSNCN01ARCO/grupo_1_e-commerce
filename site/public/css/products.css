@@ -1,0 +1,38 @@
+:root {
+    --color1: #00132B;
+    --light-blue: #8ABAD3;
+    --black: #000000;
+    --light-blue2: rgba(0,68,80,0.18);
+}
+.navbar {
+    z-index: 1040;
+    background-color: var(--color1);
+}
+.side-nav {
+margin-top: 45px !important;
+}
+
+.double-nav .breadcrumb-dn p {
+  color: #fff;
+}
+.row {
+    margin-top: 22vw;
+}
+#button-color {
+    color: var(--light-blue);
+}
+.light-blue-skin .side-nav .sidenav-bg:after, .light-blue-skin .side-nav .sidenav-bg.mask-strong:after {
+    background-color: var(--color1);
+}
+
+@media (min-width: 768px) {
+    .row {
+        margin-top: 10vw;
+    }
+}
+@media (min-width: 1200px){
+    .fixed-sn main {
+  margin-left: 20% !important;
+  margin-right: 20% !important;
+}
+}
