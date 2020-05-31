@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.0/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap">
+    <link rel="stylesheet" href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.0/css/mdb.min.css">
+    <link rel="stylesheet" href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/compiled-addons-4.19.0.min.css">
+    <link rel="stylesheet" type="text/css" href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/mdb-plugins-gathered.min.css">
+    <link rel="stylesheet" href="css/products.css">
+</head>
+<body class="fixed-sn light-blue-skin" aria-busy="true">
+
+    <!--Double navigation-->
+    <header>
+      <!-- Sidebar navigation -->
+      <div id="slide-out" class="side-nav sn-bg-4 fixed" style="width: 240px; transform: translateX(0px);">
+        <ul class="custom-scrollbar ps">
+          <!-- Logo -->
+          <li>
+            <div class="logo-wrapper waves-light waves-effect waves-light">
+              <a href="#"><img src="/images/nexus.png" class="img-fluid flex-center"></a>
+            </div>
+          </li>
+          <!--/. Logo -->
+          <!-- Side navigation links -->
+          <li>
+            <ul class="collapsible collapsible-accordion">
+                <li>
+                    <a class="collapsible-header waves-effect arrow-r">Motherboard</a>
+                </li>
+                <li>
+                    <a class="collapsible-header waves-effect arrow-r">Procesador</a>
+                </li>
+                <li>
+                    <a class="collapsible-header waves-effect arrow-r">Memoria RAM</a>
+                </li>
+                <li>
+                    <a class="collapsible-header waves-effect arrow-r">Placa de video</a>
+                </li>
+                <li>
+                    <a class="collapsible-header waves-effect arrow-r">Disco duro</a>
+                </li>
+                <li>
+                    <a class="collapsible-header waves-effect arrow-r">Fuente</a>
+                </li>
+                <li>
+                    <a class="collapsible-header waves-effect arrow-r">Cooler</a>
+                </li>
+                <li>
+                    <a class="collapsible-header waves-effect arrow-r">S O</a>
+                </li>
+                <li>
+                    <a class="collapsible-header waves-effect arrow-r">Gabinete</a>
+                </li>        
+              <li><a class="collapsible-header waves-effect arrow-r"><i class="far fa-envelope"></i> Contact me<i class="fas fa-angle-down rotate-icon"></i></a>
+                <div class="collapsible-body">
+                  <ul>
+                    <li>
+                        <a href="#" style="text-decoration: none;" class="waves-effect">Mi cuenta</a>
+                    </li>
+                    <li>
+                        <a href="#" style="text-decoration: none;" class="waves-effect">Perfil</a>
+                    </li>
+                    <li>
+                        <a href="#" style="text-decoration: none;" class="waves-effect">Mi pedido</a>
+                    </li>
+                    <li>
+                        <a href="#" style="text-decoration: none;" class="waves-effect">Mis preguntas</a>
+                    </li>
+                    <li>
+                        <a href="#" style="text-decoration: none;" class="waves-effect">¿Quienes somos?</a>
+                    </li>
+                    <li>
+                        <a href="#" style="text-decoration: none;" class="waves-effect">¿Donde estamos?</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!--/. Side navigation links -->
+        <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></ul>
+        <div class="sidenav-bg mask-strong" style="width: 240px;"></div>
+      </div>
+      <!--/. Sidebar navigation -->
+      <!-- Navbar -->
+      <nav class="navbar fixed-top navbar-toggleable-md navbar-expand-lg double-nav" style="padding-left: unset; background-color: var(--color1);">
+        <!-- SideNav slide-out button -->
+        <div class="float-left">
+          <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars" id="button-color"></i></a>
+        </div>
+        <!-- Breadcrumb-->
+        <div class="navbar-brand ml-lg-2">
+            Productos
+        </div>
+      </nav>
+      <!-- /.Navbar -->
+    </header>
+    <!--/.Double navigation-->
+  
+    <!--Main Layout-->
+        <div class="container mt-3">
+
+            <div class="row">
+                <% for( let index = 0; index < productos.length; index++ ) { %>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <a href="/productos/<%= productos[index].id%>">
+                              <img class="card-img-top" src="/images/products/<%= productos[index].image %>" alt="">
+                            </a>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <a href="/productos/<%= productos[index].id%>"><%= productos[index].name %> </a>
+                                </h4>
+                                <h5>$ <%=productos[index].price %></h5>
+                                <p class="card-text"><%= productos[index].description%></p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                            </div>
+                        </div>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    </main>
+    <!--Main Layout-->
+  
+  <script type="text/javascript" src="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.0/js/jquery.min.js"></script><script type="text/javascript" src="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.0/js/popper.min.js"></script><script type="text/javascript" src="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.0/js/bootstrap.min.js"></script><script type="text/javascript" src="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.0/js/mdb.min.js"></script><script type="text/javascript" src="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/bundles/4.19.0/compiled-addons.min.js"></script><script type="text/javascript" src="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/plugins/mdb-plugins-gathered.min.js"></script><script type="text/javascript">$(document).ready(function() {
+    $(".button-collapse").sideNav({
+      breakpoint: 1200
+    });
+      // SideNav Scrollbar Initialization
+      var sideNavScrollbar = document.querySelector('.custom-scrollbar');
+      var ps = new PerfectScrollbar(sideNavScrollbar);
+  });</script><div class="hiddendiv common"></div><div class="drag-target" style="left: 0px;"></div><div id="sidenav-overlay hidden-lg" style="opacity: 1; " class=""></div></body>
+</html>

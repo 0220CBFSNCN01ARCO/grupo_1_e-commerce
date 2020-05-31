@@ -42,9 +42,9 @@
         </nav>
 
     </header>
-    <h2 class="text-center">Agregar producto</h2>
+    <h2 class="text-center">Editando producto con nombre: <%= productToEdit.name %></h2>
     <div class="container fluid">
-        <form class="formulario-producto" action="/productos" method="POST" enctype="multipart/form-data">
+        <form class="formulario-producto" action="/productos/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <div class="container border border-dark mt-3">
                 <div class="row mt-2">
                     <div class="form-group col-12 ">
@@ -53,7 +53,7 @@
                                 <label for="productName">Nombre del producto</label>
                             </div>
                             <div class="col-6 align-self-center">
-                                <input class="form-control" type="text" id="productName" name="nameproduct">
+                                <input class="form-control" type="text" id="productName" name="nameproduct" value="<%= productToEdit.name %>">
                             </div>
                         </div>
                     </div>
@@ -63,7 +63,7 @@
                                 <label for="productPrice">Precio</label>
                             </div>
                             <div class="col-6">
-                                <input class="form-control" type="number" id="productPrice" name="priceproduct">
+                                <input class="form-control" type="number" id="productPrice" name="priceproduct" value="<%= productToEdit.price %>">
                             </div>
                         </div>
                     </div>
@@ -73,7 +73,7 @@
                                 <label for="productStock">Stock</label>
                             </div>
                             <div class="col-6">
-                                <input class="form-control" type="number" id="productStock" name="stockproduct">
+                                <input class="form-control" type="number" id="productStock" name="stockproduct" value="<%= productToEdit.stock %>">
                             </div>
                         </div>
                     </div>
@@ -83,13 +83,13 @@
                                 <label for="productDescription">Descripcion</label>
                             </div>
                             <div class="col-6">
-                                <textarea class="form-control" id="productDescription" rows="3"  name="descriproduct"> </textarea>
+                                <textarea class="form-control" id="productDescription" rows="3"  name="descriproduct" ><%= productToEdit.description %></textarea>
                             </div>
                         </div>
                     </div>
                     <div class="form-group col-12" id="form-file">
                         <label for="imgProduct">Agrega Imagen del producto</label>
-                        <input type="file" class="form-control-file" id="imgProduct " name="imgproduct" >
+                        <input type="file" class="form-control-file" id="imgProduct " name="imgproduct">
                     </div>
                     <div class="form-group col-12">
                         <div class="row">
