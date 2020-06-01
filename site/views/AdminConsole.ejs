@@ -16,10 +16,13 @@
                 <i class="fa fa-bars"></i>
             </button>
             <a href="/" class="navbar-brand mr-auto" id="brand">
-                <img src="/images/nexus.png" class="d-inline-block mr-1" alt=""> Administrador
+                <img src="/images/nexus.png" class="d-inline-block mr-1" alt="">
             </a>
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> Administrador</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"> Productos</a>
                     </li>
@@ -56,21 +59,29 @@
                 <tbody class="text-center">
                     <% for( let i = 0; i < productos.length; i++ ) { %>
                         <tr>
-                            <th scope="row" class="align-middle"><%=productos[i].id %> </th>
-                            <td class="align-middle"><%= productos[i].name %></td>
-                            <td class="align-middle"><%= productos[i].price %></td>
-                            <td class="align-middle"><%= productos[i].stock %></td>
+                            <th scope="row" class="align-middle">
+                                <%=productos[i].id %>
+                            </th>
+                            <td class="align-middle">
+                                <%= productos[i].name %>
+                            </td>
+                            <td class="align-middle">
+                                <%= productos[i].price %>
+                            </td>
+                            <td class="align-middle">
+                                <%= productos[i].stock %>
+                            </td>
                             <td class="align-middle" id="iconos-tabla">
                                 <form action="/productos/<%= productos[i].id %>?_method=DELETE" method="post">
-                                    <button type="submit"><i class="fas fa-trash-alt"></i></button>   
+                                    <button type="submit"><i class="fas fa-trash-alt"></i></button>
                                 </form>
                                 <form action="/productos/<%= productos[i].id %>/edit" method="get">
-                                    <button type="submit"><i class="fas fa-edit"></i></button>   
+                                    <button type="submit"><i class="fas fa-edit"></i></button>
                                 </form>
                             </td>
                         </tr>
-                    <% } %>
-                   
+                        <% } %>
+
                 </tbody>
             </table>
         </div>

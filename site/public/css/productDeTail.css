@@ -8,7 +8,12 @@
     margin-top: -5vh;
 }
 
+#cantidad {
+    width: 8vw;
+    font-size: 2vw;
+    margin-top: 3vh;
+}
+
 #comprar {
-    margin-left: 14vh;
-    margin-top: -11vh;
+    margin-top: 2vh;
 }

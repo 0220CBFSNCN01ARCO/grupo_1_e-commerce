@@ -11,14 +11,14 @@
 </head>
 
 <body>
-    
+
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-nav2 bg-nav">
             <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa fa-bars"></i>
             </button>
             <a class="navbar-brand mr-auto" href="">
-                <img src="/images/nexus.png" class="d-inline-block align-buttom" alt=""> Administrador
+                <img src="/images/nexus.png" class="d-inline-block align-buttom" alt="/"> Administrador
             </a>
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav">
@@ -42,7 +42,9 @@
         </nav>
 
     </header>
-    <h2 class="text-center">Editando producto con nombre: <%= productToEdit.name %></h2>
+    <h2 class="text-center">Editando producto con nombre:
+        <%= productToEdit.name %>
+    </h2>
     <div class="container fluid">
         <form class="formulario-producto" action="/productos/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <div class="container border border-dark mt-3">
@@ -83,7 +85,7 @@
                                 <label for="productDescription">Descripcion</label>
                             </div>
                             <div class="col-6">
-                                <textarea class="form-control" id="productDescription" rows="3"  name="descriproduct" ><%= productToEdit.description %></textarea>
+                                <textarea class="form-control" id="productDescription" rows="3" name="descriproduct"><%= productToEdit.description %></textarea>
                             </div>
                         </div>
                     </div>
