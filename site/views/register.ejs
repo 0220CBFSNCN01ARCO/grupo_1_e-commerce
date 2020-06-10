@@ -15,7 +15,7 @@
     <%- include('./partials/header.ejs') %>
 
         <div class="container">
-           
+
             <div class="formulario">
                 <form action="/users/register" method="POST" enctype="multipart/form-data">
                     <h1 class="titulo-formulario">Registrate</h1>
@@ -71,7 +71,7 @@
                         </small>
 
                         <label for="exampleInputEmail1" class="correoElectronico">Correo electronico</label>
-                        <input type="email" class="form-control" id="inputsFormulario" aria-describedby="emailHelp" placeholder="Confirmar correo" name = 'emailConfirm'>
+                        <input type="email" class="form-control" id="inputsFormulario" aria-describedby="emailHelp" placeholder="Confirmar correo" name='email'>
                         <small id="mensajeDebajoDeInput" class="form-text text-muted">
                             <% if (typeof errores != 'undefined') { %>
                                 <p style="color: red">
@@ -106,15 +106,6 @@
                         <input type="file" id="inputsFormulario" aria-describedby="emailHelp" name="user">
                     </div>
                     <button type="submit" class="btn btn-dark" id="crear-cuenta">Crear cuenta</button>
-                    <div class="iconos">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                        <i class="fa fa-twitter-square" aria-hidden="true"></i>
-                        <i class="fa fa-youtube" aria-hidden="true"></i>
-                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
-
-
-
-                    </div>
                 </form>
             </div>
             <button type="submit" class="btn btn-dark" id="ingresar">Ingresar</button>
