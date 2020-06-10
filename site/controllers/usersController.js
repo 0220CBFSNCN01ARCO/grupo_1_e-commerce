@@ -17,7 +17,7 @@ const UsersController = {
                 first_name: req.body.fname,
                 last_name: req.body.lname,
                 email: req.body.email,
-                password: bcrypt.hashSync(req.body.pass,10),
+                password: bcrypt.hashSync(req.body.pass, 10),
                 category: "user",
                 image: req.files[0].filename
             }
@@ -31,6 +31,30 @@ const UsersController = {
 
         }
         
-    }
+    },
+    LoginGet: function(req,res){
+        res.render('login');
+    }, 
+    LoginPost: function(req,res){
+        let userLog;
+        for (let i = 0; i < usersJson.length; i++) {
+            if(usersJson[i].email == req.body.email){
+                if(bcrypt.compareSync(req.body.password, usersJson[i].password)){
+                    userLog = usersJson[i];
+                    break;
+                }
+            }   
+        }
+        if(userLog == undefined){
+            return res.render('login', { errores: [
+                {msg: "La contraseña o el email es invalido"}
+            ]});
+        }
+        if(req.body.remember != undefined){
+            res.cookie('rmbr', bcrypt.hashSync(userLog.email , 10), {maxAge: 3600000});
+        }
+        req.session.usuarioLogueado = userLog;
+        return res.redirect('/');
+    }, 
 }
 module.exports = UsersController; 

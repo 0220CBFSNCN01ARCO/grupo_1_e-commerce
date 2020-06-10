@@ -4,11 +4,13 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var methodOverride = require('method-override');
+var session = require('express-session');
 
 var indexRouter = require('./routes/index');
 var productosRouter = require('./routes/productos');
 var adminRouter = require('./routes/administrador');
 var userRouter = require('./routes/users');
+var recordame = require('./middlewares/remMiddleware');
 
 var app = express();
 
@@ -21,7 +23,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(methodOverride("_method"))
+app.use(methodOverride("_method"));
+app.use(session({secret:'Mermelada de fresa'}))
+app.use(recordame);
+
 
 app.use('/', indexRouter);
 app.use('/productos', productosRouter);

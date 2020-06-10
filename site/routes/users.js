@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var UserController = require('../controllers/usersController');
+var GuestMiddleware = require('../middlewares/guestMiddleware');
 var multer = require('multer');
 var path = require('path');
 let {check, validationResult, body} = require('express-validator');
@@ -17,10 +18,10 @@ var storage = multer.diskStorage({
   var upload = multer({ storage: storage })
 
 /* Rutas Usuarios  */
-router.get('/login');
-router.post('/login');
+router.get('/login',GuestMiddleware, UserController.LoginGet);
+router.post('/login', UserController.LoginPost);
 
-router.get('/register', UserController.RegisterGet);
+router.get('/register',GuestMiddleware, UserController.RegisterGet);
 router.post('/register',upload.any(),[ 
   check('email').isEmail().withMessage('Ingresa un correo valido'),
   check('emailConfirm').custom((value,{req, loc, path}) => {
