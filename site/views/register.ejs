@@ -15,26 +15,95 @@
     <%- include('./partials/header.ejs') %>
 
         <div class="container">
+           
             <div class="formulario">
-                <form>
+                <form action="/users/register" method="POST" enctype="multipart/form-data">
                     <h1 class="titulo-formulario">Registrate</h1>
                     <div class="form-group">
                         <label for="exampleInputEmail1" class="nombre">Nombre</label>
-                        <input type="text" class="form-control" id="inputsFormulario" aria-describedby="emailHelp" placeholder="Nombre">
-                        <small id="mensajeDebajoDeInput" class="form-text text-muted">Tus datos estan seguros con
-                    nostros</small>
+                        <input type="text" class="form-control" id="inputsFormulario" aria-describedby="emailHelp" placeholder="Nombre" name="fname">
+                        <small id="mensajeDebajoDeInput" class="form-text text-muted">
+                            <% if (typeof errores != 'undefined') { %>
+                                <p style="color: red">
+                                    <% for( let i = 0; i < errores.length; i++ ) { %>
+                                        <% if (errores[i].param == 'fname') { %>
+                                            <%= errores[i].msg %> 
+                                        <% } %>
+                                <% } %>
+                                 </p>
+                                
+                            <% } else { %>
+                                Tus datos estan seguros con nostros
+                            <% } %>
+                        </small>
+                        <label for="exampleInputEmail1" class="nombre">Apellido</label>
+                        <input type="text" class="form-control" id="inputsFormulario" aria-describedby="emailHelp" placeholder="apellido" name="lname">
+                        <small id="mensajeDebajoDeInput" class="form-text text-muted">
+                            <% if (typeof errores != 'undefined') { %>
+                                <p style="color: red">
+                                    <% for( let i = 0; i < errores.length; i++ ) { %>
+                                        <% if (errores[i].param == 'lname') { %>
+                                            <%= errores[i].msg %> 
+                                        <% } %>
+                                <% } %>
+                                 </p>
+                                
+                            <% } else { %>
+                                Tus datos estan seguros con nostros
+                            <% } %>
+                        </small>
 
                         <label for="exampleInputEmail1" class="correoElectronico">Correo electronico</label>
-                        <input type="email" class="form-control" id="inputsFormulario" aria-describedby="emailHelp" placeholder="Correo electronico">
-                        <small id="mensajeDebajoDeInput" class="form-text text-muted">Nunca compartiremos tu correo con
-                    nadie</small>
+                        <input type="email" class="form-control" id="inputsFormulario" aria-describedby="emailHelp" placeholder="Correo electronico" name="email">
+                        <small id="mensajeDebajoDeInput" class="form-text text-muted">
+                            <% if (typeof errores != 'undefined') { %>
+                                <p style="color: red">
+                                    <% for( let i = 0; i < errores.length; i++ ) { %>
+                                        <% if (errores[i].param == 'email') { %>
+                                            <%= errores[i].msg %> 
+                                        <% } %>
+                                <% } %>
+                                 </p>
+                                
+                            <% } else { %>
+                               Nunca compartiremos tu correo con nadie
+                            <% } %>
+                        </small>
 
                         <label for="exampleInputEmail1" class="correoElectronico">Correo electronico</label>
-                        <input type="email" class="form-control" id="inputsFormulario" aria-describedby="emailHelp" placeholder="Confirmar correo">
+                        <input type="email" class="form-control" id="inputsFormulario" aria-describedby="emailHelp" placeholder="Confirmar correo" name = 'emailConfirm'>
+                        <small id="mensajeDebajoDeInput" class="form-text text-muted">
+                            <% if (typeof errores != 'undefined') { %>
+                                <p style="color: red">
+                                    <% for( let i = 0; i < errores.length; i++ ) { %>
+                                        <% if (errores[i].param == 'emailConfirm') { %>
+                                            <%= errores[i].msg %> 
+                                        <% } %>
+                                <% } %>
+                                 </p>
+                                
+                            <% } %>
+                        </small>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1" id="contraseña" placeholder="Contraseña">Contraseña</label>
-                        <input type="password" class="form-control" id="inputsFormulario" placeholder="Contraseña">
+                        <input type="password" class="form-control" id="inputsFormulario" placeholder="Contraseña" name="pass">
+                        <small id="mensajeDebajoDeInput" class="form-text text-muted">
+                            <% if (typeof errores != 'undefined') { %>
+                                <p style="color: red">
+                                    <% for( let i = 0; i < errores.length; i++ ) { %>
+                                        <% if (errores[i].param == 'pass') { %>
+                                            <%= errores[i].msg %> 
+                                        <% } %>
+                                <% } %>
+                                 </p>
+                                
+                            <% } %>
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1" id="contraseña" placeholder="Contraseña">Foto de perfil</label>
+                        <input type="file" id="inputsFormulario" aria-describedby="emailHelp" name="user">
                     </div>
                     <button type="submit" class="btn btn-dark" id="crear-cuenta">Crear cuenta</button>
                     <div class="iconos">

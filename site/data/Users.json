@@ -178,5 +178,23 @@
         "password": "KwuzBK2pPFHb",
         "category": "user",
         "image": "user_20.jpg"
+    },
+    {
+        "id": 21,
+        "first_name": "Gaston ",
+        "last_name": "Requena",
+        "email": "gaston.requena@gmail.com",
+        "password": "$2b$10$b3z/k8.ea9nt6u/9ih82aOF3CFN5X69E6OLaGdc2FvAeKtqql2ljy",
+        "category": "user",
+        "image": "user-1591768310487.png"
+    },
+    {
+        "id": 22,
+        "first_name": "Gaston ",
+        "last_name": "Requena",
+        "email": "gaston.requena@icloud.com",
+        "password": "$2b$10$VuKjFaOmGh4pPbRzBPUGTOsIuPts3IAiShIkhibl4Q48ZFUipNK0K",
+        "category": "user",
+        "image": "user-1591768718887.png"
     }
 ]

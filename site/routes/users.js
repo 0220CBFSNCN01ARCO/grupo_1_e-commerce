@@ -1,12 +1,13 @@
 var express = require('express');
 var router = express.Router();
-// controlador
+var UserController = require('../controllers/usersController');
 var multer = require('multer');
 var path = require('path');
+let {check, validationResult, body} = require('express-validator');
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, 'public/images/products')
+      cb(null, 'public/images/users')
     },
     filename: function (req, file, cb) {
       cb(null, file.fieldname + '-' + Date.now()+path.extname(file.originalname));
@@ -19,8 +20,21 @@ var storage = multer.diskStorage({
 router.get('/login');
 router.post('/login');
 
-router.get('/register');
-router.post('/register');
+router.get('/register', UserController.RegisterGet);
+router.post('/register',upload.any(),[ 
+  check('email').isEmail().withMessage('Ingresa un correo valido'),
+  check('emailConfirm').custom((value,{req, loc, path}) => {
+    if (value !== req.body.email) {
+        throw new Error("los emails no coinciden");
+    } else {
+        return value;
+    }
+  }),
+  check('pass').isLength({min: 8}).withMessage('la contraseña debe tener almenos 8 caracteres'),
+  check('fname').isLength({min: 1}).withMessage('Ingresa tu nombre'),
+  check('lname').isLength({min: 1}).withMessage('Ingresa tu apellido')
+
+], UserController.RegisterPost);
 
 router.get('/profile/edit');
 router.put('/profile');
