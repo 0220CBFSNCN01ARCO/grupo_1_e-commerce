@@ -24,13 +24,13 @@ router.post('/login', UserController.LoginPost);
 router.get('/register',GuestMiddleware, UserController.RegisterGet);
 router.post('/register',upload.any(),[ 
   check('email').isEmail().withMessage('Ingresa un correo valido'),
-  check('emailConfirm').custom((value,{req, loc, path}) => {
-    if (value !== req.body.email) {
-        throw new Error("los emails no coinciden");
-    } else {
-        return value;
-    }
-  }),
+  // check('emailConfirm').custom((value,{req, loc, path}) => {
+  //   if (value !== req.body.email) {
+  //       throw new Error("los emails no coinciden");
+  //   } else {
+  //       return value;
+  //   }
+  // }),
   check('pass').isLength({min: 8}).withMessage('la contraseña debe tener almenos 8 caracteres'),
   check('fname').isLength({min: 1}).withMessage('Ingresa tu nombre'),
   check('lname').isLength({min: 1}).withMessage('Ingresa tu apellido')
