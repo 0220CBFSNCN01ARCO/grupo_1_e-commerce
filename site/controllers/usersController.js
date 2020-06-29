@@ -48,7 +48,7 @@ const UsersController = {
                 ]});
             }
             if(req.body.remember != undefined){
-                res.cookie('rmbr', user.id, {maxAge: 3600000});
+                res.cookie('rmbr',bcrypt.hashSync(userLog.email,10), {maxAge: 3600000});
             }
             req.session.usuarioLogueado = userLog;
             return res.redirect('/');

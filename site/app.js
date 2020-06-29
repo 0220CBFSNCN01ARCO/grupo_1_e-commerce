@@ -23,12 +23,12 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-
+app.use(session({secret:'Mermelada de fresa'}))
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride("_method"));
-
-app.use(session({secret:'Mermelada de fresa'}))
 app.use(recordame);
+
+
 
 
 
