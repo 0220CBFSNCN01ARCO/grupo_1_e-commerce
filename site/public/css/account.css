@@ -112,6 +112,10 @@ margin-right: 20% !important;
 }}
 
 @media (min-width: 1360px){
+  .max-resolution {
+    margin-left: 15vw;
+    margin-top: 5vw;
+  }
   .form-control {
     width: 45%;
   }
