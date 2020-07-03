@@ -103,7 +103,6 @@ color: #fff;
 @media (min-width: 1024px){
   .logo-img {
     width: 11vw;
-    margin-left: 52rem;
 }}
 
 @media (min-width: 1200px){
@@ -112,7 +111,14 @@ margin-left: 20% !important;
 margin-right: 20% !important;
 }}
 
-@media (min-width: 1440px){
-  .logo-img {
-    margin-left: 75rem;
-}}
+@media (min-width: 1360px){
+  .form-control {
+    width: 45%;
+  }
+  .form-control2 {
+    float: left;
+    margin-top: -12vw;
+    margin-left: 45vw;
+    width: 100vw;
+  }
+}
