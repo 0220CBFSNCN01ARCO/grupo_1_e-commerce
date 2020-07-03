@@ -1,17 +1,24 @@
-const fs = require('fs');
+
 const bcrypt = require('bcrypt');
-let usersJson = JSON.parse(fs.readFileSync('./data/Users.json'));
+const db = require('../database/models');
+//let usersJson = JSON.parse(fs.readFileSync('./data/Users.json'));
 function recordame(req,res,next){ 
     if(req.cookies.rmbr != undefined && req.session.usuarioLogueado == undefined){
         let userLog;
-        for (let i = 0; i < usersJson.length; i++) {
-            if(bcrypt.compareSync(usersJson[i].email, req.cookies.rmbr)){
-                userLog = usersJson[i];
-                break;  
-            }   
-        }
-        req.session.usuarioLogueado = userLog;
+        db.Users.findAll()
+        .then(users => {
+            for (let i = 0; i < users.length; i++) {
+                if(bcrypt.compareSync(users[i].email,req.cookies.rmbr)){
+                    req.session.usuarioLogueado = users[i];
+                    break;
+                }
+            }
+            next();
+        });
+        
+    }else{
+        next();
     }
-    next();
+    
 }
 module.exports = recordame;

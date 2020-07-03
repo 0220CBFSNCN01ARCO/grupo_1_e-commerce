@@ -2,6 +2,9 @@ const fs = require('fs');
 const bcrypt = require('bcrypt');
 let {check, validationResult, body} = require('express-validator');
 let usersJson = JSON.parse(fs.readFileSync('./data/Users.json'));
+let db = require('../database/models');
+const { send } = require('process');
+
 
 
 
@@ -12,23 +15,17 @@ const UsersController = {
     RegisterPost: function(req,res,next){
         let errors = validationResult(req);
         if(errors.isEmpty()){
-            let newUser = {
-                id : usersJson.length + 1,
-                first_name: req.body.fname,
-                last_name: req.body.lname,
+            console.log(req.body.pass);
+            db.Users.create({
+                firstName: req.body.fname,
+                lastName: req.body.lname,
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.pass, 10),
-                category: "user",
-                image: req.files[0].filename
-            }
-            usersJson.push(newUser);
-
-            fs.writeFileSync('./data/Users.json', JSON.stringify(usersJson));
+                avatar: req.files[0].filename
+            })
             return res.redirect('/');
         }else{
-
             return res.render('register', {'errores': errors.errors});
-
         }
         
     },
@@ -37,24 +34,29 @@ const UsersController = {
     }, 
     LoginPost: function(req,res){
         let userLog;
-        for (let i = 0; i < usersJson.length; i++) {
-            if(usersJson[i].email == req.body.email){
-                if(bcrypt.compareSync(req.body.password, usersJson[i].password)){
-                    userLog = usersJson[i];
-                    break;
-                }
-            }   
-        }
-        if(userLog == undefined){
+        db.Users.findOne({
+            where:{
+                email: req.body.email
+            }
+        }).then(user => {
+            const match = bcrypt.compare(req.body.password, user.password);
+            if(match){
+                userLog = user;
+            }else{
+                return res.render('login', { errores: [
+                    {msg: "La contraseña invalida"}
+                ]});
+            }
+            if(req.body.remember != undefined){
+                res.cookie('rmbr',bcrypt.hashSync(userLog.email,10), {maxAge: 3600000});
+            }
+            req.session.usuarioLogueado = userLog;
+            return res.redirect('/');
+        }).catch(error =>{ 
             return res.render('login', { errores: [
-                {msg: "La contraseña o el email es invalido"}
+                {msg: "No existe el correo"}
             ]});
-        }
-        if(req.body.remember != undefined){
-            res.cookie('rmbr', bcrypt.hashSync(userLog.email , 10), {maxAge: 3600000});
-        }
-        req.session.usuarioLogueado = userLog;
-        return res.redirect('/');
-    }, 
+        });
+    }
 }
 module.exports = UsersController; 

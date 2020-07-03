@@ -1,9 +1,13 @@
 const fs = require('fs');
-let productosJson = JSON.parse(fs.readFileSync('./data/Productos.json'));
+//let productosJson = JSON.parse(fs.readFileSync('./data/Productos.json'));
+let db = require('../database/models');
 
 const cuentaAdm = {
     Menu: function(req,res){
-        res.render('AdminConsole', {"productos" : productosJson});
+        db.Product.findAll()
+        .then(product => {
+            res.render('AdminConsole', {"productos" : product})
+        });
     }
 }
 module.exports = cuentaAdm;
