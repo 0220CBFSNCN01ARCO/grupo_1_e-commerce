@@ -1,0 +1,39 @@
+#inputs{
+    border: 0;
+    background: none;
+    display: block;
+    text-align: center;
+    border: 1px solid #000000;
+    margin-left: 30px;
+    padding: 10px 14px;
+    width: 200px;
+    outline: none;
+    color: black;
+    border-radius: 10px;
+}
+#inputs:focus {
+    width: 280px;
+    border-color: #000000;
+}
+
+#text{
+    margin-left: 40px;
+}
+#ingresar {
+    border: 0;
+    background: none;
+    display: block;
+    margin-left: 50px;
+    text-align: center;
+    border: 1px solid #000000;
+    padding: 10px 40px;
+    outline: none;
+    color: #000000;
+    border-radius: 24px;
+    transform: 0.25s;
+    cursor: pointer;
+}
+
+#ingresar:hover {
+    background: grey;
+}

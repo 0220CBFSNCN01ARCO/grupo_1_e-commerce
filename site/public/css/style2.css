@@ -13,7 +13,6 @@
 }
 
 body {
-    background-color: var(--light-blue2)!important;
     color: var(--light-blue);
 }
 
@@ -85,7 +84,7 @@ body {
 }
 
 .banner {
-    background-image: url(../images/banner\ placeholder.png);
+    background-image: url(/images/banner-2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -111,6 +110,15 @@ body {
 #logo-footer {
     display: none;
 }
+
+.page-footer{
+    background-color: #00132B;
+}
+
+.contactos-footer {
+    background-color: #8ABAD3;
+}
+
 
 
 /*Tablet*/

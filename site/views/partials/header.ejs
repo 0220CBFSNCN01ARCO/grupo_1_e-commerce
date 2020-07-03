@@ -10,10 +10,10 @@
             </form>
             <a class="nav-icons mx-auto" href="/users/login">
                 <% if (typeof user != 'undefined') { %>
-                    Hola <%= user.firstName %> 
+                    Hola <%= user.firstName %>! 
                     <% } %>
-             
-                <i class="fas fa-user-circle"></i>
+                <i class="fas fa-user-circle">
+                </i>
             </a>
             <a class="nav-icons mx-auto" href="">
                 <i class="fas fa-shopping-cart"></i>
@@ -28,7 +28,7 @@
                     <a class="nav-link" href="">NexusCraft</a>
                 </li>
                 <li class="nav-item margin-nav">
-                    <a class="nav-link " href="">Ayuda</a>
+                    <a class="nav-link " href="/ayuda">Ayuda</a>
                 </li>
                 <li class="nav-item margin-nav">
                     <a class="nav-link" href="">Mi Cuenta</a>
