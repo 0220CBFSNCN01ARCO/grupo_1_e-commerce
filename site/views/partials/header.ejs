@@ -9,6 +9,10 @@
                 <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
             </form>
             <a class="nav-icons mx-auto" href="/users/login">
+                <% if (typeof user != 'undefined') { %>
+                    Hola <%= user.firstName %> 
+                    <% } %>
+             
                 <i class="fas fa-user-circle"></i>
             </a>
             <a class="nav-icons mx-auto" href="">
