@@ -60,13 +60,24 @@ const Productos = {
         return res.redirect('/productos');
     },
     Accion_Borrado: function(req,res){
-        idproducto = req.params.id;
+        let idproducto = req.params.id;
         db.Product.destroy({
             where: {
                 id: idproducto
             }
         });
         return res.redirect('/productos');
-    }
+    },
+    FindByCategory: function(req,res){
+        let Category = req.params.category;
+        db.Category.findAll({
+            include: [{association: "products"}],
+            where: {
+                name: Category
+            }
+        }).then(categorys =>{
+            return res.render('productos', {"productos" : categorys[0].products})
+        });
+    },
 }
 module.exports = Productos;

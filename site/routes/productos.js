@@ -24,6 +24,6 @@ router.post('/',upload.any(), controllerProductos.Accion_Creacion_Productos);
 router.get('/:id/edit', controllerProductos.Edicion_productos);
 router.put('/:id',upload.any(), controllerProductos.Accion_Edicion);
 router.delete('/:id', controllerProductos.Accion_Borrado);
-
+router.get('/categorias/:category', controllerProductos.FindByCategory)
 
 module.exports = router;
