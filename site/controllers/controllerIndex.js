@@ -5,6 +5,9 @@ const index = {
         }
        return res.render('index', { title: 'Home' });
     },
+    Cuenta: function(req,res){
+        return res.render('account', { title: 'Cuenta' });
+     },
     Ayuda: function(req,res){
        return res.render('ayuda', { title: 'Ayuda' });
     }
