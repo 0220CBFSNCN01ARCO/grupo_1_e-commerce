@@ -1,90 +1,58 @@
 body {
-    background-image: url("../images/fondo-formulario.jpeg");
-    background-repeat: no-repeat;
-    background-size: 105vw 118vh;
-    font-family: 'Fira Mono', monospace;
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Mono', monospace;   
+    background-color: #00132B;
 }
 
-.titulo-formulario {
-    background-color: #000000;
-    color: #8ABAD3;
-    width: 56vw;
-    font-size: 34px;
-    margin-top: 5vw;
-    margin-left: 2vw;
-    padding-left: 2vw;
-    border-radius: 2vw;
+.imagen {
+    background-size: 44px;
+    width: 100px;
+    height: 32px;
+    margin-top: 8px;
+    margin-left: 10px;
 }
 
-.nombre {
-    margin-left: 2vw;
+#box h1 {
+    text-transform: uppercase;
     color: white;
 }
 
-#mensajeDebajoDeInput {
-    margin-left: 2vw;
-}
-
-.correoElectronico {
-    margin-left: 2vw;
-    margin-top: 2vh;
+#inputs {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 1px solid #3498db;
+    padding: 10px 14px;
+    width: 200px;
+    outline: none;
     color: white;
+    border-radius: 24px;
+    transform: 0.25s;
 }
 
-#contraseña {
+#inputs:focus {
+    width: 280px;
+    border-color: #2ecc71;
+}
+
+#ingresar {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 1px solid #2ecc71;
+    padding: 10px 40px;
+    outline: none;
     color: white;
-    margin-left: 2vh;
+    border-radius: 24px;
+    transform: 0.25s;
+    cursor: pointer;
 }
 
-#inputsFormulario {
-    width: 56vw;
-    margin-left: 2vw;
-}
-
-#crear-cuenta {
-    margin-left: 2vh;
-    color: #8ABAD3;
-}
-
-.iconos {
-    font-size: 9vw;
-    margin-top: 2vw;
-    margin-left: 2vw;
-    color: #000000;
-}
-
-@media (min-width: 600px) {
-    .titulo-formulario {
-        width: 32vw;
-        border-radius: 1vw;
-    }
-    #inputsFormulario {
-        width: 32vw;
-    }
-    .container {
-        display: flex;
-    }
-    #ingresar {
-        display: block;
-        position: relative;
-        height: 5vw;
-        margin-top: 27vh;
-        margin-left: 14vh;
-    }
-}
-
-@media (min-width: 1200px) {
-    .titulo-formulario {
-        border-radius: 1.1vh;
-    }
-    .formulario {
-        margin-left: -39vh
-    }
-    .iconos {
-        font-size: 8vh;
-    }
-    #ingresar {
-        width: 7vw;
-        height: 6vh;
-    }
+#ingresar:hover {
+    background: #2ecc71;
 }

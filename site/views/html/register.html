@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../public/css/style2.css">
-    <link rel="stylesheet" href="../../public/css/formulario.css">
+    <link rel="stylesheet" href="../../public/css/login-boots.css">
     <title>Formulario de registracion</title>
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -26,187 +25,89 @@
 
 </head>
 
-<body>
-  <header class="main-header">
-    <div class="pc">
-      <div class="container-fluid contenedor-header">
-        <a class="brand" href="">
-          <img src="../../public/images/nexus.png" alt="Logo">
-        </a>
-        <form action="" method="get" class="search-form mx-auto">
-          <input type="text" name="search" placeholder="Buscar productos, marcas y más" class="search-form_input">
-          <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
-        </form>
-        <a class="nav-icons mx-auto" href="">
-          <i class="fas fa-user-circle"></i>
-          <a class="nav-icons mx-auto" href="">
-            <i class="fas fa-shopping-cart"></i>
-          </a>
-      </div>
-      <nav>
-        <ul class="nav bg-nav nav-fill">
-          <li class="nav-item margin-nav dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Productos
-            </a>
-            <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-              <a class="dropdown-item " href="#">Perifericos</a>
-              <a class="dropdown-item" href="#">Motherboard</a>
-              <a class="dropdown-item " href="#">Procesador</a>
-              <a class="dropdown-item" href="#">Memorias ram</a>
-              <a class="dropdown-item " href="#">Almacenamiento</a>
-              <a class="dropdown-item" href="#">Fuente</a>
-              <a class="dropdown-item " href="#">Coolers</a>
-              <a class="dropdown-item" href="#">Gabinete</a>
-            </div>
-          </li>
-          <li class="nav-item margin-nav">
-            <a class="nav-link" href="">NexusCraft</a>
-          </li>
-          <li class="nav-item margin-nav">
-            <a class="nav-link " href="">Ayuda</a>
-          </li>
-          <li class="nav-item margin-nav">
-            <a class="nav-link" href="">Mi Cuenta</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <nav class="navbar navbar-dark bg-nav phone">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fa fa-bars"></i>
-      </button>
-      <a class="navbar-brand mr-0" href="">
-        <img src="../../public/images/nexus.png" alt="Logo">
-      </a>
-      <a class="nav-icons" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" href="">
-        <i class="fas fa-search"></i>
-      </a>
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header border-bottom-0">
-              <form class="modal-form aling-center">
-                <input type="search" placeholder="Search" aria-label="Search">
-                <button type="submit"><i class="fas fa-search"></i></button>
-              </form>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+<body style="background-color: #00132B;;">
+  <img src="../../public/images/nexus.png" class="imagen" alt="logo">
+  <!-- Default form login -->
+  <form class="text-center p-5" id="box" action="#!">
+
+      <h1 class="h4 mb-4">Registrate</h1>
+
+      <!-- Name -->
+      <input type="text" name="fname" id="inputs" placeholder="Nombre">
+
+      <!-- Last Name -->
+      <input type="text" name="lname" id="inputs" placeholder="Apellido">
+
+      <!-- Email -->
+      <input type="email" name="email" id="inputs" placeholder="Correo electronico">
+
+      <!-- Email 2 -->
+      <input type="email" name="email" id="inputs" placeholder="Correo electronico">
+
+      <!-- Password -->
+      <input type="password" name="password" id="inputs" placeholder="Contraseña">
+
+      <!-- Sign in button -->
+      <button class="btn btn-info" id="ingresar" type="submit">Crear cuenta</button>
+
+      <div class="d-flex justify-content-around">
+          <div>
+              <!-- Photo -->
+              <div class="form-group">
+                <label for="exampleInputPassword1" id="contraseña" placeholder="Contraseña">Foto de perfil</label>
+                <input type="file" id="inputsFormulario" aria-describedby="emailHelp" name="user">
             </div>
           </div>
-        </div>
+          <div>
+              <!-- Forgot password -->
+              <a href="">¿No recuerdas tu contraseña?</a>
+          </div>
       </div>
-      <a class="nav-icons" href="">
-        <i class="fas fa-user-circle"></i>
-        <a class="nav-icons" href="">
-          <i class="fas fa-shopping-cart"></i>
-        </a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Productos
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item " href="#">Perifericos</a>
-                <a class="dropdown-item" href="#">Motherboard</a>
-                <a class="dropdown-item " href="#">Procesador</a>
-                <a class="dropdown-item" href="#">Memorias ram</a>
-                <a class="dropdown-item " href="#">Almacenamiento</a>
-                <a class="dropdown-item" href="#">Fuente</a>
-                <a class="dropdown-item " href="#">Coolers</a>
-                <a class="dropdown-item" href="#">Gabinete</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="">NexusCraft</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="">Ayuda</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="">Mi Cuenta</a>
-            </li>
-          </ul>
-        </div>
-    </nav>
+      <!-- Register -->
+      <p>Tienes una cuenta?
+          <a href="">Inicia Sesión</a>
+      </p>
 
-  </header>
+      <!-- Social login -->
+      <p>Ingresar con:</p>
 
-    <div class="container">
-        <div class="formulario">
-        <form>
-            <h1 class="titulo-formulario">Registrate</h1>
-            <div class="form-group">
-                <label for="exampleInputEmail1" class="nombre">Nombre</label>
-                <input type="text" class="form-control" id="inputsFormulario" aria-describedby="emailHelp" placeholder="Nombre">
-                <small id="mensajeDebajoDeInput" class="form-text text-muted">Tus datos estan seguros con
-                    nostros</small>
+      <div class="col-md-6 col-lg-7 text-center text-md-right">
 
-                <label for="exampleInputEmail1" class="correoElectronico">Correo electronico</label>
-                <input type="email" class="form-control" id="inputsFormulario" aria-describedby="emailHelp" placeholder="Correo electronico">
-                <small id="mensajeDebajoDeInput" class="form-text text-muted">Nunca compartiremos tu correo con
-                    nadie</small>
+          <!-- Facebook -->
+          <a class="fb-ic" href="#">
+              <i class="fab fa-facebook-f white-text mr-4"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic" href="#">
+              <i class="fab fa-twitter white-text mr-4"> </i>
+          </a>
+          <!-- Google +-->
+          <a class="gplus-ic" href="#">
+              <i class="fab fa-google-plus-g white-text mr-4"> </i>
+          </a>
+          <!--Linkedin -->
+          <a class="li-ic" href="#">
+              <i class="fab fa-linkedin-in white-text mr-4"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic" href="#">
+              <i class="fab fa-instagram white-text"> </i>
+          </a>
 
-                <label for="exampleInputEmail1" class="correoElectronico">Correo electronico</label>
-                <input type="email" class="form-control" id="inputsFormulario" aria-describedby="emailHelp" placeholder="Confirmar correo">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1" id="contraseña" placeholder="Contraseña">Contraseña</label>
-                <input type="password" class="form-control" id="inputsFormulario" placeholder="Contraseña">
-            </div>
-            <button type="submit" class="btn btn-dark" id="crear-cuenta">Crear cuenta</button>
-            <div class="iconos">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-                <i class="fa fa-twitter-square" aria-hidden="true"></i>
-                <i class="fa fa-youtube" aria-hidden="true"></i>
-                <i class="fa fa-envelope-o" aria-hidden="true"></i>
-
-
-
-            </div>
-        </form>
-    </div>
-        <button type="submit" class="btn btn-dark" id="ingresar">Ingresar</button>
-
-    </div>
-
-    <footer class="footer">
-        <img src="../../public/images/logo-footer.png" alt="logo" id="logo-footer">
-        <ul class="lista-1">
-            <li><a href="#" style="text-decoration: none;">Incio</a></li>
-            <li><a href="#" style="text-decoration: none;">Productos</a></li>
-            <li><a href="#" style="text-decoration: none;">NexusCraft</a></li>
-            <li><a href="#" style="text-decoration: none;">Ayuda</a></li>
-            <li><a href="#" style="text-decoration: none;"><b>Contacto</b></a></li>
-        </ul>
-        <ul class="lista-2">
-            <li><a href="#" style="text-decoration: none;">Mi cuenta</a></li>
-            <li><a href="#" style="text-decoration: none;">Perfil</a></li>
-            <li><a href="#" style="text-decoration: none;">Mi pedido</a></li>
-            <li><a href="#" style="text-decoration: none;">Mis preguntas</a></li>
-            <li><a href="#" style="text-decoration: none;">¿Quienes somos?</a></li>
-            <li><a href="#" style="text-decoration: none;"><b>¿Donde estamos?</b></a></li>
-
-        </ul>
-        <div class="form-group mx-sm-3 mb-2" id="input-footer">
-          <label for="exampleInputEmail1" class="label-footer">Recibe nuestras promociones!</label>
-          <input type="email" class="form-control" id="input-footer" placeholder="Correo electronico">
-            </div>
-        <button type="submit" class="btn btn-primary mb-2" id="boton-footer">Aceptar</button>
-        <div class="iconos-footer">
-          <i class="fa fa-instagram" aria-hidden="true"></i>
-          <i class="fa fa-twitter-square" aria-hidden="true"></i>
-          <i class="fa fa-youtube" aria-hidden="true"></i>
-          <i class="fa fa-envelope-o" aria-hidden="true"></i>
       </div>
-    </footer>
+      <!-- Grid column -->
+
+  </form>
+  <!-- Default form login -->
+  <footer class="page-footer font-small blue bgColorBlue">
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2020 Copyright -
+          <a href="/" id="LinkFooter"> Nexus.com</a>
+      </div>
+      <!-- Copyright -->
+  </footer>
+
 </body>
 
 </html>
