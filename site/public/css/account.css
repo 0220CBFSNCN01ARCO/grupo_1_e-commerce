@@ -126,3 +126,19 @@ margin-right: 20% !important;
     width: 100vw;
   }
 }
+
+@media (min-width: 1550px){
+  .max-resolution {
+    margin-left: 15vw;
+    margin-top: 5vw;
+  }
+  .form-control {
+    width: 45%;
+  }
+  .form-control2 {
+    float: left;
+    margin-top: -12vw;
+    margin-left: 45vw;
+    width: 100vw;
+  }
+}
