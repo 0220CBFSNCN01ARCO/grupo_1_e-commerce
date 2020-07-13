@@ -46,6 +46,7 @@ body {
 
 .nav div.logo a img {
     width: 35vw;
+    margin-top: 0rem;
 }
 
 .nav div.main_list {
@@ -97,10 +98,6 @@ body {
     z-index: 10;
 }
 
-#nav2 {
-    margin-top: -21rem;
-}
-
 #wrap {
     margin: 30px;
     position: relative;
@@ -116,7 +113,7 @@ body {
     height: 50px;
     font-size: 55px;
     display: inline-block;
-    font-family: "Lato";
+    font-family: 'Fira Mono';
     font-weight: 100;
     border: none;
     outline: none;
@@ -149,71 +146,12 @@ body {
     color: var(--light-blue);
 }
 
-/* Body */
-
-.products-title {
-    text-align: center;
-    margin-top: 1rem;
-}
-
-#card-style2 {
-    margin: 5vw;
-}
-
-#card {
-    background-color: var(--color1);
-    padding-bottom: 5vw;
-}
-
-.card-img-top {
-    width: 89.5vw;
-    border-top-left-radius: calc(.25rem - 1px);
-    border-top-right-radius: calc(.25rem - 1px);
-}
-.card-body {
-    padding: 1.25rem;
-    border-bottom: 1px solid var(--light-blue);
-}
-
-.card-title {
-    margin: auto;
-    font-size:1.5rem;
-}
-
-.card-title a {
-    color: var(--light-blue);
-    text-decoration: none;
-}
-
-#card-decoration {
-    color: var(--light-blue);
-    font-size:1.5rem;
-    margin-top: 5vw;
-    margin-bottom: 5vw;
-}
-
-.card-footer {
-    margin-left: 5vw;
-    margin-top: 4vw;
-}
-
-#card-style {
-    margin-left: 4vw;
-}
-.card-text {
-    width: 80vw;
-    font-size: 15px;
-    color: var(--light-blue);
-    padding-right: 11vw;
-}
-
-.text-star {
-    color: yellow;
-    font-size: 6vw;
-}
-
 /* Media */
-
+@media (min-width:375px) {
+    .affix {
+        padding-top: 2vw!important;
+    }
+}
 
 @media (max-width: 425px) {
     .home {
@@ -223,8 +161,8 @@ body {
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .container {
-        margin: 0;
-    }
+        margin: 10;
+    }    
 }
 
 @media screen and (max-width:600px) {
@@ -313,9 +251,13 @@ body {
         color: white;
         margin-left: -5rem;
     }
+    #nav1 {
+        margin-left: 16rem;
+        margin-top: -72px;
+    }
     #nav2 {
-        margin-top: 0.5rem;
-        margin-left: -21vw;
+        margin-top: 2.5rem;
+        margin-left: 2rem;
     }
     .nav div.main_list ul li a {
         font-size: 3vw;
@@ -326,14 +268,84 @@ body {
         border-right: 1px solid;
         margin-right: 4rem;
     }
-    .card-text {
-        padding-right: 38vw;
-    }
-    .text-star {
-        font-size: 2.5vw;
+    .affix {
+        margin-top: -14vw!important;
+        padding-top: 0vw!important;
+        height: 23vw!important;
     }
 }
 
+@media (min-width: 1024px) {
+    .nav div.logo a img {
+        width: 12rem;
+        margin-top: 1rem;
+    }
+    #nav1 {
+        margin-left: 30rem;
+        margin-top: -5.5rem;
+    }
+    #nav2 {
+        margin-top: 2.75rem;
+        margin-left: 5rem;
+    }
+    #icon-login {
+        margin-left: -7rem;
+    }
+    .button {
+        height: 6rem;
+        margin-left: -31vw;
+    }
+    input[type="text"] {
+        right: 137px;
+    }
+    .nav div.main_list ul li a {
+        font-size: 2vw;
+    }
+    #nav-section {
+        margin-right: 9rem;
+    }
+    .affix {
+        padding-top: 0.5vw!important;
+        height: 19vw!important;
+        margin-top: -12vw!important;
+    }
+}
+
+@media (min-width: 1360px) {
+    .nav div.logo a img {
+        width: 15rem;
+        margin-top: 2rem;
+    }
+    #nav1 {
+        margin-left: 50rem;
+        margin-top: -8.5rem;
+    }
+    #nav2 {
+        margin-top: 6.75rem;
+        margin-left: 8rem;
+    }
+    #nav-section {
+        margin-right: 11rem;
+    }
+    #icon-login {
+        margin-left: -10rem;
+    }
+    .button {
+        height: 7rem;
+    }
+    input[type="text"] {
+        right: 12rem;
+        top: 1.5rem;
+    }
+    input[type="text"]:focus {
+        width: 35rem;
+        font-size: 2rem;
+    }
+    .affix {
+        padding-top: 0vw!important;
+        margin-top: -13vw!important;
+    }
+}
 .navTrigger {
     cursor: pointer;
     width: 30px;
@@ -524,14 +536,11 @@ body {
 }
 
 .affix {
-    padding-top: 3vw;
+    padding-top: 0vw;
     background-color: #111;
+    height: 21vw;
+    margin-top: 3vw;
 }
-
-
-
-
-
 
 .myH2 {
 	text-align:center;
