@@ -10,10 +10,12 @@
             </form>
             <a class="nav-icons mx-auto" href="/users/login">
                 <% if (typeof user != 'undefined') { %>
-                    Hola <%= user.firstName %>! 
+                    Bienvenido, <%= user.firstName %>
+                    <img src="/images/users/<%= user.avatar %> " alt="" id="userAvatar"> 
+                <% } else { %>
+                <i class="fas fa-user-circle"></i>
                 <% } %>
-                <i class="fas fa-user-circle">
-                </i>
+              
             </a>
             <a class="nav-icons mx-auto" href="">
                 <i class="fas fa-shopping-cart"></i>
@@ -31,7 +33,7 @@
                     <a class="nav-link " href="/ayuda">Ayuda</a>
                 </li>
                 <li class="nav-item margin-nav">
-                    <a class="nav-link" href="/perfil">Mi Cuenta</a>
+                    <a class="nav-link" href="/users/profile">Mi Cuenta</a>
                 </li>
             </ul>
         </nav>

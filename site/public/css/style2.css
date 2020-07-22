@@ -19,6 +19,11 @@ body {
 
 
 /* Header */
+#userAvatar{
+    border-radius: 55px;
+    width: 55px;
+    height: 55px;
+}
 
 .pc {
     display: none;
@@ -43,6 +48,10 @@ body {
 .nav-icons {
     font-size: 1.7rem;
     color: var(--light-blue);
+    
+}
+.nav-icons:hover{
+    text-decoration: none;
 }
 
 .navbar-brand {

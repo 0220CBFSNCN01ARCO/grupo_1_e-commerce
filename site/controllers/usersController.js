@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 let {check, validationResult, body} = require('express-validator');
 let usersJson = JSON.parse(fs.readFileSync('./data/Users.json'));
 let db = require('../database/models');
-const { send } = require('process');
+
 
 
 
@@ -57,6 +57,12 @@ const UsersController = {
                 {msg: "No existe el correo"}
             ]});
         });
+    },
+    ProfileGet: function(req,res){
+        if( req.session.usuarioLogueado != undefined){
+            return res.render('account', {user: req.session.usuarioLogueado });
+        }
+       return res.send("no estas logueado");
     }
 }
 module.exports = UsersController; 

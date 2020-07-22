@@ -5,7 +5,6 @@ var GuestMiddleware = require('../middlewares/guestMiddleware');
 var multer = require('multer');
 var path = require('path');
 let {check, validationResult, body} = require('express-validator');
-const UsersController = require('../controllers/usersController');
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -37,7 +36,7 @@ router.post('/register',upload.any(),[
   check('lname').isLength({min: 1}).withMessage('Ingresa tu apellido')
 
 ], UserController.RegisterPost);
-
+router.get('/profile', UserController.ProfileGet);
 router.get('/profile/edit');
 router.put('/profile');
 module.exports = router;
