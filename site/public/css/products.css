@@ -28,6 +28,27 @@ margin-top: 45px !important;
     background-color: var(--color1);
 }
 
+.submenu #carrito{
+    display: none;
+}
+.submenu:hover #carrito{
+    display: block;
+    position: absolute;
+    right:0;
+
+    top:100%;
+    z-index: 1;
+    background-color: white;
+    padding: 20px;
+    min-height: 400px;
+    min-width: 300px;
+}
+
+.double-nav{
+    padding-left: unset; 
+    background-color: #00132B;
+}
+
 @media (min-width: 768px) {
     .row {
         margin-top: 10vw;
