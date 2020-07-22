@@ -13,7 +13,7 @@
 <body style="background-color: #00132B;;">
     <a href="/"><img src="/images/nexus.png" class="imagen" alt="logo"></a>
     <!-- Default form login -->
-    <form class="text-center p-5" id="box" action="#!">
+    <form class="text-center p-5" id="box" action="/users/register" method="POST" enctype="multipart/form-data" >
   
         <h1 class="h4 mb-4">Registrate</h1>
                              <!-- Name -->
@@ -67,7 +67,7 @@
                         </small>
 
                         <!-- Email 2 -->
-                    <input type="email" name="email" id="inputs" placeholder="Correo electronico">
+                    <input type="email" name="emailConfirm" id="inputs" placeholder="Correo electronico">
                         <small id="mensajeDebajoDeInput" class="form-text text-muted">
                             <% if (typeof errores != 'undefined') { %>
                                 <p style="color: red">
@@ -103,7 +103,7 @@
               <!-- Photo -->
               <div class="form-group">
                 <label for="exampleInputPassword1" id="filename" placeholder="Contraseña">Foto de perfil</label>
-                <input type="file" id="inputsFormulario" aria-describedby="emailHelp" name="user">
+                <input type="file" id="inputsFormulario" aria-describedby="emailHelp" name="avatar">
             </div>
           </div>
           <div>
