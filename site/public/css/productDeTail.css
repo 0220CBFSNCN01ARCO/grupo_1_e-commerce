@@ -12,11 +12,17 @@ body {
 }
 
 #cantidad {
-    width: 8vw;
-    font-size: 2vw;
+    width: 100px;
+    font-size: 20px;
     margin-top: 3vh;
 }
 
 #comprar {
+    width: 100px;
+    margin-top: 2vh;
+}
+
+#agregar-carrito{
+    width: 210px;
     margin-top: 2vh;
 }
