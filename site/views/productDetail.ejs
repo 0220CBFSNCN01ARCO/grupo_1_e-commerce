@@ -13,71 +13,75 @@
 
 <body>
     <%- include('./partials/header.ejs') %>
-        <main>
-            <article>
-                <div class="container">
+    <main id="productos">
+        <article>
+            <div class="container">
+                <div>
+                    <h3 id="title-product"><%= producto.name %></h3>
+                </div>
+                <div class="thinBorder"></div>
+                <div class="row">
                     <div>
-                        <h3 id="title-product"><%= producto.name %></h3>
+                        <a href="#"><img class="card-img-top imagen" src="/images/products/<%= producto.img %>" alt=""></a>
                     </div>
-                    <div class="thinBorder"></div>
-                    <div class="row">
-                        <div>
-                            <a href="#"><img class="card-img-top" src="/images/products/<%= producto.img %>" alt=""></a>
-                        </div>
-                        <div class="card-body col-6-md col-12-xs">
-                            <h3>Precio Nexus</h3>
-                            <h4>$ <%= producto.price %></h4>
-                            <div class="thinBorder"></div>
-                            <h3>Precio Lista</h3>
-                            <h4>$ <%= producto.price + 3000 %></h4>
-                            <div class="thinBorder"></div>
-                            <i id="icono" class="fa fa-credit-card" aria-hidden="true"></i>
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Seleccione su metodo de pago
-                          </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Tarjeta debito</a>
-                                    <a class="dropdown-item" href="#"> Tarjeta credito</a>
-                                    <a class="dropdown-item" href="#">RapiPago</a>
-                                </div>
+                    <div class="card-body col-6-md col-12-xs">
+                        <h3>Precio Nexus</h3>
+                        <h4 id="precio">$ <%= producto.price %></h4>
+                        <div class="thinBorder"></div>
+                        <h3>Precio Lista</h3>
+                        <h4>$ <%= producto.price + 3000 %></h4>
+                        <div class="thinBorder"></div>
+                        <i id="icono" class="fa fa-credit-card" aria-hidden="true"></i>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Seleccione su metodo de pago
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Tarjeta debito</a>
+                                <a class="dropdown-item" href="#"> Tarjeta credito</a>
+                                <a class="dropdown-item" href="#">RapiPago</a>
                             </div>
+                        </div>
 
-                            <i id="icono" class="fas fa-truck" aria-hidden="true"></i>
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Seleccione su metodo de envio
-                        </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Retirar en el local</a>
-                                    <a class="dropdown-item" href="#">Retirar en Correo Argentino</a>
-                                    <a class="dropdown-item" href="#">Domicilio</a>
-                                </div>
+                        <i id="icono" class="fas fa-truck" aria-hidden="true"></i>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Seleccione su metodo de envio
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Retirar en el local</a>
+                                <a class="dropdown-item" href="#">Retirar en Correo Argentino</a>
+                                <a class="dropdown-item" href="#">Domicilio</a>
                             </div>
-                            <td id="model-input">
-                                <input id="cantidad" type="number" class="form-control cantidad" min="1" value="2">
-                            </td>
-                            <button id="comprar" type="button" class="btn btn-secondary">Comprar</button>
                         </div>
-                        <div class="card mt-4">
-                            <div class="card-body">
-                                <h3 class="card-title"><%= producto.title %></h3>
-                                <h4>Descripcion</h4>
-                                <p class="card-text"><%= producto.description %></p>
-                                <h4>Especificaiones</h4>
-                                <p class="card-text">-Lorem ipsum dolor sit ame</p>
-                                <p class="card-text">-consectetur adipisicing elit</p>
-                                <p class="card-text">-Sapiente dicta fugit fugiat hic aliquam itaque facere</p>
-                                <p class="card-text">-soluta Totam id dolores sint aperiam sequi pariatur</p>
-                                <p class="card-text">-praesentium animi perspiciatis molestias iure, ducimus</p>
-                                <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span> 4.0 stars
-                            </div>
-                            <div class="banner"></div>
-                        </div>
+                        <td id="model-input">
+                            <input id="cantidad" type="number" class="form-control cantidad" min="1" value="2">
+                        </td>
+                        <button id="comprar" type="button" class="btn btn-secondary">Comprar</button>
+                        <button type="button" class="btn btn-secondary agregar-carrito">Agregar al carrito</button>
                     </div>
-            </article>
-        </main>
-        <%- include('./partials/footer.ejs') %>
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <h3 class="card-title"><%= producto.title %></h3>
+                            <h4>Descripcion</h4>
+                            <p class="card-text"><%= producto.description %></p>
+                            <h4>Especificaiones</h4>
+                            <p class="card-text">-Lorem ipsum dolor sit ame</p>
+                            <p class="card-text">-consectetur adipisicing elit</p>
+                            <p class="card-text">-Sapiente dicta fugit fugiat hic aliquam itaque facere</p>
+                            <p class="card-text">-soluta Totam id dolores sint aperiam sequi pariatur</p>
+                            <p class="card-text">-praesentium animi perspiciatis molestias iure, ducimus</p>
+                            <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span> 4.0 stars
+                        </div>
+                        <div class="banner"></div>
+                    </div>
+                </div>
+        </article>
+    </main>
+    <%- include('./partials/footer.ejs') %>
+    <script src="/javascripts/carrito.js"></script>
 </body>
 
 </html>

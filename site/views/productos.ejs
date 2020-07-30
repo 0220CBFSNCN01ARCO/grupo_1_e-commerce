@@ -30,6 +30,9 @@
             <!-- Side navigation links -->
             <li>
                 <ul class="collapsible collapsible-accordion">
+                  <li>
+                    <a class="collapsible-header waves-effect arrow-r" href="/productos">Productos</a>
+                  </li>
                     <li>
                         <a class="collapsible-header waves-effect arrow-r" href="/productos/categorias/motherboard">Motherboard</a>
                     </li>
@@ -101,20 +104,16 @@
           <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars" id="button-color"></i></a>
         </div>
         <!-- Breadcrumb-->
-        <div class="navbar-brand ml-lg-2">
-            <a href="/productos">Productos</a>
-        </div>
-        <div class="navbar-brand ml-lg-2">
+        <div class="navbar-brand ml-lg-3">
             <a href="/">Home</a>
         </div>
-        <div class="navbar-brand ml-lg-2">
-            <a href="#">NexusCraft</a>
-        </div>
-        <div class="navbar-brand ml-lg-2">
+        <div class="navbar-brand ml-lg-3">
             <a href="#">Ayuda</a>
         </div>
-        <div class="navbar-brand ml-lg-2">
-            <a href="#">Mi cuenta</a>
+        <div  class="navbar-brand ml-lg-3">
+            <a id="carrito" class="nav-icons mx-auto" href="">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
         </div>
       </nav>
       <!-- /.Navbar -->
@@ -143,7 +142,6 @@
                             <p class="card-text">
                                 <%= productos[index].description%>
                             </p>
-                            <a href="#" class="u-full-width button-primary button input agregar-carrito">Agregar al carrito</a>
                         </div>
                         <div class="card-footer">
                             <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
@@ -163,5 +161,8 @@
       // SideNav Scrollbar Initialization
       var sideNavScrollbar = document.querySelector('.custom-scrollbar');
       var ps = new PerfectScrollbar(sideNavScrollbar);
-  });</script><div class="hiddendiv common"></div><div class="drag-target" style="left: 0px;"></div><div style="opacity: 1;" class=""></div></body>
+  });</script><div class="hiddendiv common"></div><div class="drag-target" style="left: 0px;"></div><div style="opacity: 1;" class=""></div>
+  
+<script src="/javascripts/carrito.js"></script>
+</body>
 </html>
