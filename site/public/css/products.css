@@ -8,7 +8,7 @@ body {
     --light-blue2: rgba(0,68,80,0.18);
 }
 .navbar {
-    z-index: 1040;
+    z-index: 1;
     background-color: var(--color1);
 }
 .side-nav {
@@ -24,12 +24,25 @@ margin-top: 45px !important;
 #button-color {
     color: var(--light-blue);
 }
+#slide-out{
+    z-index: 1;
+}
 .light-blue-skin .side-nav .sidenav-bg:after, .light-blue-skin .side-nav .sidenav-bg.mask-strong:after {
     background-color: var(--color1);
+   
 }
 .submenu {
     position: relative;
 }
+#CART{
+    position: absolute;
+    z-index: 2;
+    top: 3rem;
+    right: 56rem;
+    width: 236px;
+    background-color: var(--light-blue);
+}
+
 
 .submenu #carrito{
     display: none;
