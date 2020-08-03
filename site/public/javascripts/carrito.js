@@ -25,7 +25,7 @@ function leerDatosProductos(producto){
          img: producto.querySelector('.imagen').src,
          titulo: producto.querySelector('#title-product'),
          precio: producto.querySelector('#precio'),
-         id: producto.id,
+         id: producto.querySelector('#agregar-carrito').getAttribute('data-id')
      };
     agregarAlCarrito(infoProducto);    
 };
