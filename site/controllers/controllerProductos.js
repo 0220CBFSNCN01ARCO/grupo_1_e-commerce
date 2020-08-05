@@ -1,7 +1,19 @@
 const fs = require('fs');
 let productosJson = JSON.parse(fs.readFileSync('./data/Productos.json'));
 let db = require('../database/models');
+const Op = db.Sequelize.Op;
 const Productos = {
+    Buscar: function(req,res){
+        let search = req.query.id;
+        db.Product.findAll({
+            where:{
+                name: {[Op.like]: '%' + search + "%"}
+            }
+        })
+        .then(product => {
+            return res.render('productos', {"productos" : product})
+        });
+    },
     Listado_Productos: function(req,res){
         db.Product.findAll()
         .then(product => {

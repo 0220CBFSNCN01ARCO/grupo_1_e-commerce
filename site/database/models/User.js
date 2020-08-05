@@ -32,7 +32,16 @@ module.exports = (sequelize,DataTypes) => {
 			type: DataTypes.STRING(450),
 			allowNull: true,
 			field: 'avatar'
-        }  
+		},
+		iduserCategory: {
+			type: DataTypes.INTEGER(11),
+			allowNull: false,
+			references: {
+				model: 'usercategory',
+				key: 'id'
+			},
+			field: 'iduserCategory'
+		} 
     }
     let config = {
         tableName: 'users',
@@ -40,5 +49,11 @@ module.exports = (sequelize,DataTypes) => {
     }
 
 	const User = sequelize.define(alias,cols,config);
+	User.associate = function(models){
+        User.belongsTo(models.UserCategory,{
+            as: 'UserCategory',
+            foreignKey: 'iduserCategory'
+		});
+	}
     return User;
 }

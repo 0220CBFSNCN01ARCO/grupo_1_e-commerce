@@ -10,7 +10,10 @@ var indexRouter = require('./routes/index');
 var productosRouter = require('./routes/productos');
 var adminRouter = require('./routes/administrador');
 var userRouter = require('./routes/users');
+var apiRouterUser = require('./routes/api/ApiUser');
+var apiRouterProductos = require('./routes/api/ApiProductos');
 var recordame = require('./middlewares/remMiddleware');
+
 
 var app = express();
 
@@ -29,14 +32,12 @@ app.use(methodOverride("_method"));
 app.use(recordame);
 
 
-
-
-
 app.use('/', indexRouter);
 app.use('/productos', productosRouter);
 app.use('/admin', adminRouter);
 app.use('/users', userRouter);
-
+app.use('/api/users', apiRouterUser);
+app.use('/api/products',apiRouterProductos);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
