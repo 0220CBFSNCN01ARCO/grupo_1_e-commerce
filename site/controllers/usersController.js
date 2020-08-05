@@ -9,6 +9,7 @@ let db = require('../database/models');
 
 
 const UsersController = {
+  
     RegisterGet: function(req,res){
       res.render('register');
     }, 
@@ -21,13 +22,13 @@ const UsersController = {
                 lastName: req.body.lname,
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.pass, 10),
-                avatar: req.files[0].filename
+                avatar: req.files[0].filename,
+                iduserCategory: 1
             })
             return res.redirect('/');
         }else{
             return res.render('register', {'errores': errors.errors});
-        }
-        
+        }   
     },
     LoginGet: function(req,res){
         res.render('login');

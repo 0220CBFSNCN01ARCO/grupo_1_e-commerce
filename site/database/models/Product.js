@@ -23,6 +23,11 @@ module.exports = (sequelize, DataTypes) =>{
 			allowNull: false,
 			field: 'price'
 		},
+		listPrice: {
+			type: DataTypes.INTEGER(11),
+			allowNull: false,
+			field: 'listPrice'
+		},
 		stock: {
 			type: DataTypes.INTEGER(11),
 			allowNull: false,
