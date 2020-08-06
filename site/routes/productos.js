@@ -21,6 +21,7 @@ var storage = multer.diskStorage({
 router.get('/search',controllerProductos.Buscar);
 router.get('/', controllerProductos.Listado_Productos);
 router.get('/create', controllerProductos.Creacion_Productos);
+router.get('/buy', controllerProductos.BuyProduct);
 router.get('/:id',AuthMiddleware, controllerProductos.Detalles_productos);
 router.post('/',upload.any(), controllerProductos.Accion_Creacion_Productos);
 router.get('/:id/edit', controllerProductos.Edicion_productos);

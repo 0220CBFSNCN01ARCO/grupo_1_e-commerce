@@ -96,5 +96,8 @@ const Productos = {
             return res.render('productos', {"productos" : categorys[0].products})
         });
     },
+    BuyProduct: function(req, res){
+        res.render('buyProducts');
+    }
 }
 module.exports = Productos;

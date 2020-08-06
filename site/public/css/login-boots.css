@@ -4,6 +4,10 @@
                 font-family: 'Fira Mono', monospace;   
                 background-color: #00132B;
             }
+
+            .navBar-header{
+                background: #00132B;
+            }
             
             .imagen {
                 background-size: 44px;
