@@ -13,7 +13,7 @@ console.log(btnsCrear);
 EventLister();
 
 function EventLister(){
-    document.addEventListener('DOMContendLoaded', InicioApp);
+    document.addEventListener('DOMContentLoaded', InicioApp);
     name.addEventListener('blur', validarCampos);
     lastName.addEventListener('blur', validarCampos);
     email1.addEventListener('blur', validarCampos);
