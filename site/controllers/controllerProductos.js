@@ -25,7 +25,11 @@ const Productos = {
         idproducto = req.params.id;
         db.Product.findByPk(idproducto)
         .then(product => {
-            return res.render('productDetail', {"producto" : product})
+            if(product != undefined){
+                return res.render('productDetail', {"producto" : product})
+            } 
+            return res.send("404 not found");
+            
         });
     },
     Creacion_Productos: function(req,res){
@@ -39,6 +43,7 @@ const Productos = {
             name: req.body.nameproduct,
             description: req.body.descriproduct,
             price:  Number(req.body.priceproduct),
+            listPrice: Number(req.body.listPriceproduct),
             stock:  Number(req.body.stockproduct),
             img: req.files[0].filename ,
             idCategory: req.body.category,
