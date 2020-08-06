@@ -1,19 +1,22 @@
-<div id ="CART">
-    <table class="table table-bordered table-dark">
-        <thead class= "thead-dark">
-            <tr>
-                <th scope="col">Imagen</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Precio</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row"><img src="" alt="">Ejemplo ejemplo</th>
-                <td>Placa de video</td>
-                <td>$35.000</td>
-            </tr>
-        </tbody>
-    </table>
-    <button>Vaciar carrito</button>
+<div class="navbar-brand ml-auto" id="icons">
+    <ul>
+        <li class="submenu">
+                <i class="fas fa-cart-arrow-down" id="cart"></i>
+        <div id="carrito">
+            <table id="lista-carrito" class="u-full-width">
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <button class="button-cart" style="background-color: var(--color1)">
+                <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+            </button>
+        </div>
+        </li>
+    </ul>
 </div>

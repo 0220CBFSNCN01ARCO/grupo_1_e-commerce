@@ -101,7 +101,9 @@
       <nav class="navbar fixed-top navbar-toggleable-md navbar-expand-lg double-nav" style="padding-left: unset; background-color: var(--color1);">
         <!-- SideNav slide-out button -->
         <div class="float-left">
-          <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars" id="button-color"></i></a>
+            <a href="#" data-activates="slide-out" class="button-collapse" style="margin-right: 2rem;">
+                <i class="fa fa-bars" id="button-color"></i>
+            </a>
         </div>
         <!-- Breadcrumb-->
         <div class="navbar-brand ml-lg-3">
@@ -110,12 +112,7 @@
         <div class="navbar-brand ml-lg-3">
             <a href="#">Ayuda</a>
         </div>
-        <div  class="navbar-brand ml-lg-3">
-            <a id="carrito" class="nav-icons mx-auto" href="">
-                <i class="fas fa-shopping-cart"></i>
-            </a>
-         
-        </div>
+            <%- include("./partials/carrito.ejs") %> 
       </nav>
       <!-- /.Navbar -->
     </header>
@@ -151,7 +148,6 @@
                 </div>
                 <% } %>
         </div>
-        <%- include("./partials/carrito.ejs") %> 
     </div>
     </main>
     <!--Main Layout-->

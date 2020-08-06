@@ -33,6 +33,7 @@ margin-top: 45px !important;
 }
 .submenu {
     position: relative;
+    
 }
 #CART{
     position: absolute;
@@ -43,6 +44,25 @@ margin-top: 45px !important;
     background-color: var(--light-blue);
 }
 
+#cart {
+    font-size: 1.5rem;
+    float: right;
+    margin-top: 0.5rem;
+    margin-left: -2rem;
+}
+
+#carrito {
+    background-color:  rgba(0,68,80)!important;
+}
+
+#lista-carrito {
+    width: 16rem;
+}
+
+.button-cart {
+    background-color: var(--color1);
+    margin-top: 6rem;
+}
 
 .submenu #carrito{
     display: none;
@@ -55,7 +75,7 @@ margin-top: 45px !important;
     z-index: 1;
     background-color: white;
     padding: 20px;
-    min-height: 400px;
+    min-height: 200px;
     min-width: 300px;
 }
 .double-nav{
