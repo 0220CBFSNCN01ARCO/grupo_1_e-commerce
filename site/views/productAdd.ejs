@@ -14,7 +14,8 @@
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-nav2 bg-nav">
-            <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa fa-bars"></i>
             </button>
             <a class="navbar-brand mr-auto" href="">
@@ -98,9 +99,9 @@
                             <div class="col-6">
                                 <select name="category" id="categorias">
                                     <% for( let i = 0; i < categorias.length; i++ ) { %>
-                                        <option value= <%= categorias[i].id %>> <%= categorias[i].name %> </option>
-                                    <% } %> 
-                                  </select>
+                                    <option value=<%= categorias[i].id %>> <%= categorias[i].name %> </option>
+                                    <% } %>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -110,7 +111,8 @@
                                 <label for="productDescription">Descripcion</label>
                             </div>
                             <div class="col-6">
-                                <textarea class="form-control" id="productDescription" rows="3" name="descriproduct"> </textarea>
+                                <textarea class="form-control" id="productDescription" rows="3"
+                                    name="descriproduct"> </textarea>
                             </div>
                         </div>
                     </div>

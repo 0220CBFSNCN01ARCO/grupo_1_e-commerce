@@ -1,14 +1,21 @@
 //Variables
 let carrito = document.getElementById('carrito')
 let productos = document.getElementById('productos');
-
+let botonComprar = document.querySelector("#comprar");
 
 //Eventos
 leerEventos();
 
 function leerEventos(){
  productos.addEventListener('click', agregarCarro);
+ botonComprar.addEventListener('click', comprar)
 }
+
+function comprar(){
+    location.href = "/productos/buy"
+}
+
+
 
 function agregarCarro(e){
   e.preventDefault();
