@@ -11,9 +11,10 @@ body {
   width:300px;
   border-radius:150px;
   height: 15rem;
-  padding-top: 18%;
+  padding-top: 20%;
   padding-bottom: 16%;
   margin-top: 1vw;
+  object-fit: cover;
 }
 .navbar {
   z-index: 1040;
