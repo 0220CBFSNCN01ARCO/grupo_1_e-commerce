@@ -16,7 +16,7 @@ const UsersController = {
     RegisterPost: function(req,res,next){
         let errors = validationResult(req);
         if(errors.isEmpty()){
-            console.log(req.body.pass);
+
             db.Users.create({
                 firstName: req.body.fname,
                 lastName: req.body.lname,
@@ -63,7 +63,7 @@ const UsersController = {
         if( req.session.usuarioLogueado != undefined){
             return res.render('account', {user: req.session.usuarioLogueado });
         }
-       return res.send("no estas logueado");
+       return res.redirect("/users/login");
     }
 }
 module.exports = UsersController; 

@@ -33,7 +33,13 @@ router.post('/register',upload.any(),[
   }),
   check('pass').isLength({min: 8}).withMessage('la contraseña debe tener almenos 8 caracteres'),
   check('fname').isLength({min: 1}).withMessage('Ingresa tu nombre'),
-  check('lname').isLength({min: 1}).withMessage('Ingresa tu apellido')
+  check('lname').isLength({min: 1}).withMessage('Ingresa tu apellido'),
+  check('avatar').custom((value,{req, loc, path})=>{
+    if(req.files[0].filename != undefined){
+      value = "1";
+      return value;
+    }
+  })
 
 ], UserController.RegisterPost);
 router.get('/profile', UserController.ProfileGet);

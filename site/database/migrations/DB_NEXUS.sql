@@ -42,14 +42,14 @@ CREATE TABLE `carts` (
 
 CREATE TABLE `category` (
   `id` int(11) NOT NULL,
-  ` name` varchar(255) NOT NULL
+  `name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `category`
 --
 
-INSERT INTO `category` (`id`, ` name`) VALUES
+INSERT INTO `category` (`id`, `name`) VALUES
 (1, 'motherboard'),
 (2, 'procesador'),
 (3, 'memoria'),
