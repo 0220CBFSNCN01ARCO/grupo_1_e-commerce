@@ -75,7 +75,7 @@
                                         <% if (errores[i].param == 'emailConfirm') { %>
                                             <%= errores[i].msg %> 
                                         <% } %>
-                                <% } %>
+                                    <% } %>
                                  </p>
                                 
                             <% } %>
@@ -90,22 +90,34 @@
                                         <% if (errores[i].param == 'pass') { %>
                                             <%= errores[i].msg %> 
                                         <% } %>
-                                <% } %>
+                                    <% } %>
                                  </p>
                                 
                             <% } %>
                         </small>
+                        <div>
+                            <!-- Photo -->
+                            <div class="form-group">
+                              <label for="exampleInputPassword1" id="filename" placeholder="Contraseña">Foto de perfil</label>
+                              <input type="file" id="inputsFormulario" aria-describedby="emailHelp" name="avatar">
+                              <small id="mensajeDebajoDeInput" class="form-text text-muted">
+                                <% if (typeof errores != 'undefined') { %>
+                                    <p style="color: red">
+                                        <% for( let i = 0; i < errores.length; i++ ) { %>
+                                            <% if (errores[i].param == 'avatar') { %>
+                                               Agrega una imagen para continuar
+                                            <% } %>
+                                        <% } %>
+                                     </p>
+                                    
+                                <% } %>
+                            </small>
+                            </div>
+                        </div>
                      <!-- Sign in button -->
-      <button class="btn btn-info" id="ingresar" type="submit">Crear cuenta</button>
+                    <button class="btn btn-info" id="ingresar" type="submit">Crear cuenta</button>
 
       <div class="d-flex justify-content-around">
-          <div>
-              <!-- Photo -->
-              <div class="form-group">
-                <label for="exampleInputPassword1" id="filename" placeholder="Contraseña">Foto de perfil</label>
-                <input type="file" id="inputsFormulario" aria-describedby="emailHelp" name="avatar">
-            </div>
-          </div>
           <div>
               <!-- Forgot password -->
               <a href="">¿No recuerdas tu contraseña?</a>
