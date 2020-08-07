@@ -10,16 +10,36 @@
             </form>
             <a class="nav-icons mx-auto" href="/users/login">
                 <% if (typeof user != 'undefined') { %>
-                    Bienvenido, <%= user.firstName %>
                     <img src="/images/users/<%= user.avatar %> " alt="" id="userAvatar"> 
                 <% } else { %>
                 <i class="fas fa-user-circle"></i>
                 <% } %>
-              
             </a>
-            <a id="carrito" class="nav-icons mx-auto" href="">
-                <i class="fas fa-shopping-cart"></i>
-            </a>
+            <div class="navbar-brand ml-auto" id="icons">
+                <ul>
+                    <li class="submenu">
+                            <i class="fas fa-cart-arrow-down" id="cart"></i>
+                    <div id="carrito">
+                        <table id="lista-carrito" class="u-full-width table">
+                            <thead>
+                                <tr>
+                                    <th id="section" scope="col"><b>Imagen</b></th>
+                                    <th id="section" scope="col"><b>Nombre</b></th>
+                                    <th id="section" scope="col"><b>Precio</b></th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                        <button class="button-cart">
+                            <a href="#" id="shopcart" class="button u-full-width">Vaciar Carrito</a>
+                        </button>
+                        <button class="button-cart">
+                            <a href="#" id="shopcart" class="button u-full-width ml-auto">Comprar</a>
+                        </button>
+                    </div>
+                    </li>
+                </ul>
+            </div>
         </div>
         <nav>
             <ul class="nav bg-nav nav-fill">

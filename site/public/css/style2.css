@@ -81,6 +81,26 @@ body {
     opacity: 0.9;
 }
 
+.submenu {
+    color: white;
+}
+
+#cart {
+    color: white;
+}
+
+#section {
+    border-top: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+#shopcart {
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+}
+
 
 /*Contenido*/
 
