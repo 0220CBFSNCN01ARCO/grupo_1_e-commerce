@@ -101,6 +101,15 @@ body {
     text-decoration: none;
 }
 
+#button-sesion {
+    background-color: var(--color1);
+    border: none;
+    width: 4rem;
+}
+
+.dropdown-toggle::after {
+    color: var(--color1);
+}
 
 /*Contenido*/
 

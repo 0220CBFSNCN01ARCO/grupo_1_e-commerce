@@ -56,7 +56,7 @@ function agregarAlCarrito(producto) {
        ${producto.precio}
        </td>
        <td>
-       <a href="#" data-id="${producto.id}"><i class="fas fa-trash-alt eliminar-producto"></i></a>
+       <a href="#" style="color:black;" data-id="${producto.id}"><i class="fas fa-trash-alt eliminar-producto"></i></a>
        </td>
        `;
        listaCarrito.appendChild(row);

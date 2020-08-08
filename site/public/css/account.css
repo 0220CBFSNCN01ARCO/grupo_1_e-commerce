@@ -43,6 +43,12 @@ color: #fff;
 #button-color {
   color: var(--light-blue);
 }
+#ingresar{
+  background-color: var(--color1)!important;
+  border: 1px solid var(--light-blue);
+  color: var(--light-blue);
+  border-radius: 30px;
+}
 .light-blue-skin .side-nav .sidenav-bg:after, .light-blue-skin .side-nav .sidenav-bg.mask-strong:after {
   background-color: var(--color1);
 }
@@ -83,21 +89,25 @@ color: #fff;
 }
 @media (min-width: 768px) {
   body {
-    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+  .formulario {
+    margin-left: 33.5%;
+    margin-right: 33.5%;
   }
   .row {
       margin-top: 10vw;
   }
   .info-title {
-    font-size: 4vw;
+    font-size: 1rem;
     margin-top: 16vw;
-    margin-left: 19vw;
+    margin-left: 5vw;
   }
   .form-control {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .side-nav .collapsible a {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 }
 

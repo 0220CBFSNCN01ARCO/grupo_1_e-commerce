@@ -31,6 +31,10 @@ margin-top: 45px !important;
     background-color: var(--color1);
    
 }
+#sidenav-overlay {
+    display: none;
+}
+
 .submenu {
     position: relative;
     
@@ -63,6 +67,12 @@ margin-top: 45px !important;
 
 #section {
     border-bottom: 1px solid var(--color1);
+}
+
+#vaciar-carrito {
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
 }
 
 .button-cart {
