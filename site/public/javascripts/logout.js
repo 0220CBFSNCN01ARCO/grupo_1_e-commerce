@@ -1,21 +1,19 @@
 // Variables
-const imgUser= document.getElementById ("userAvatar")
-console.log (imgUser);
+const logOut= document.getElementById ("cerrar-sesion")
+
 
 //EventListener
 EventListener ();
 
 function EventListener() {
-    imgUser.addEventListener("click",cerrarSesion)
+    logOut.addEventListener("click", cerrarSesion)
 }
 
 //Function
 
 function cerrarSesion() {
-    imgUser.innerHTML= `<div class="btn-group">
-    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        ↓
-    </button>
+    const row =document.createElement('div');
+    row.innerHTML= `
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Mí cuenta</a>
       <a class="dropdown-item" href="#">Modificar datos</a>
@@ -24,4 +22,5 @@ function cerrarSesion() {
       <a class="dropdown-item" href="#">Cerrar sesión</a>
     </div>
 </div>`
+           logOut.appendChild(row);
 }
