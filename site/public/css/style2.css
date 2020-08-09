@@ -104,7 +104,8 @@ body {
 #button-sesion {
     background-color: var(--color1);
     border: none;
-    width: 4rem;
+    width: 80px;
+    height: 60px;
 }
 
 .dropdown-toggle::after {

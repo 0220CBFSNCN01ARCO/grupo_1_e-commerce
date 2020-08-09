@@ -8,22 +8,28 @@
                 <input type="text" name="id" placeholder="Buscar productos, marcas y más" class="search-form_input">
                 <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
             </form>
-                        <div class="btn-group">
-                            <button id="button-sesion" type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              <% if (typeof user != 'undefined') { %>
-                                <img src="/images/users/<%= user.avatar %> " alt="" id="userAvatar"> 
-                                <% } else { %>
-                                <i class="fas fa-user-circle"></i>
-                                <% } %>
-                            </button>
-                            <div class="dropdown-menu">
-                              <a class="dropdown-item" href="/users/login">Mí cuenta</a>
-                              <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="#">Cerrar sesión</a>
-                            </div>
-                          </div>
-            
-            <%- include("carrito.ejs") %> 
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <% if (typeof user != 'undefined') { %>
+                        <img src="/images/users/<%= user.avatar %>" alt="" id="userAvatar">
+                    <% } else { %>
+                        <i class="fas fa-user-circle"></i>
+                    <% } %>
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <% if (typeof user != 'undefined') { %>
+                        <a class="dropdown-item" href="/users/profile">Mí cuenta</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Cerrar sesión</a>
+                    <% } else { %>
+                        <a class="dropdown-item" href="/users/login">Iniciar sesión</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/users/register">Registrarse</a>
+                    <% } %>
+                </div>
+            </div>
+
+            <%- include("carrito.ejs") %>
         </div>
         <nav>
             <ul class="nav bg-nav nav-fill">
@@ -43,16 +49,18 @@
         </nav>
     </div>
     <nav class="navbar navbar-dark bg-nav phone">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <i class="fa fa-bars"></i>
-  </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars"></i>
+        </button>
         <a class="navbar-brand mr-0" href="">
             <img src="/images/nexus.png" alt="Logo">
         </a>
         <a class="nav-icons" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" href="">
             <i class="fas fa-search"></i>
         </a>
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header border-bottom-0">
@@ -61,33 +69,35 @@
                             <button type="submit"><i class="fas fa-search"></i></button>
                         </form>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-        <a class="nav-icons" href="">
+        <a class="nav-icons" href="/users/login">
             <i class="fas fa-user-circle"></i>
-            <a class="nav-icons" href="">
-                <i class="fas fa-shopping-cart"></i>
-            </a>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/productos">Productos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">NexusCraft</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/ayuda">Ayuda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/perfil">Mi Cuenta</a>
-                    </li>
-                </ul>
-            </div>
+        </a>
+
+        <a class="nav-icons" href="">
+            <i class="fas fa-shopping-cart"></i>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/productos">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">NexusCraft</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/ayuda">Ayuda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/perfil">Mi Cuenta</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
 </header>

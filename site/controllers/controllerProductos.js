@@ -26,7 +26,9 @@ const Productos = {
         db.Product.findByPk(idproducto)
         .then(product => {
             if(product != undefined){
-                return res.render('productDetail', {"producto" : product})
+                return res.render('productDetail', {"producto" : product,
+                "user": req.session.usuarioLogueado
+            })
             } 
             return res.send("404 not found");
             

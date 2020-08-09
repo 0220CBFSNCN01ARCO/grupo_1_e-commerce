@@ -9,7 +9,8 @@ const index = {
         return res.render('account', { title: 'Cuenta' });
      },
     Ayuda: function(req,res){
-       return res.render('ayuda', { title: 'Ayuda' });
+       return res.render('ayuda', { title: 'Ayuda',"user": req.session.usuarioLogueado 
+    });
     }
 }
 module.exports = index;
