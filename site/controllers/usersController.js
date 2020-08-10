@@ -71,7 +71,7 @@ const UsersController = {
     editProfilePost:  function(req,res,next){
         let user = req.session.usuarioLogueado.id;
         let imagen = req.session.usuarioLogueado.avatar
-        if(req.files != undefined){
+        if(req.files[0] != undefined){
              imagen = req.files[0].filename;
         }
         db.Users.update({
@@ -86,7 +86,7 @@ const UsersController = {
                 id: user
             }
         });
-
+        req.session.destroy();
         return res.redirect('/');
     },
     logOUT: function(req,res){

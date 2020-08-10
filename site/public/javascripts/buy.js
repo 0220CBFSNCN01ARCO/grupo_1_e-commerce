@@ -5,7 +5,8 @@ let cantidadProductos = document.querySelector("#PRODUCTOS");
 let PrecioTOTAL = document.querySelector("#PAGA");
 let Titulo = document.querySelector("#Titulo");
 let Texto = document.querySelector("#Texto");
-let Comprar = document.querySelector('#Comprar')
+let Comprar = document.querySelector('#Comprar');
+let Img = document.querySelector('#imagenProductos');
 let TOTAL = 0;
 let CANTIDAD = 0 ;
 
@@ -18,13 +19,17 @@ function leerEventos(){
 }
 
 function totalProductos(){
-    
-    const TEXTO = document.createElement("ul");
+
+   Img.src = "/images/giphy.gif"
+   const TEXTO = document.createElement("ul");
    let productos = obtenerProductoLocalStorage();
    for (let i = 0; i < productos.length; i++) {
         TOTAL += productos[i].precio;
         CANTIDAD += Number(productos[i].cantidad);
         TEXTO.innerHTML += `<li>${productos[i].titulo}</li>`
+   }
+   if(CANTIDAD <= 1){
+       Img.src = productos[0].img;
    }
    Titulo.innerHTML =`Listado de productos`;
    Texto.appendChild(TEXTO);
