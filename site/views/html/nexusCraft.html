@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.0/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap">
+    <link rel="stylesheet" href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.0/css/mdb.min.css">
+    <link rel="stylesheet" href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/compiled-addons-4.19.0.min.css">
+    <link rel="stylesheet" type="text/css" href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/mdb-plugins-gathered.min.css">
+    <link rel="stylesheet" href="/css/products.css">
+    <link rel="icon" href="images/icon-no.png">
+</head>
+<body class="fixed-sn light-blue-skin" aria-busy="true">
+
+    <!--Double navigation-->
+    <header>
+      <!-- Sidebar navigation -->
+      <div id="slide-out" class="side-nav sn-bg-4 fixed" style="width: 240px; transform: translateX(0px);">
+        <ul class="custom-scrollbar ps">
+            <!-- Logo -->
+            <li>
+                <div class="logo-wrapper waves-light waves-effect waves-light">
+                    <a href="/"><img src="/images/nexus.png" class="img-fluid flex-center"></a>
+                </div>
+            </li>
+            <!--/. Logo -->
+            <!-- Side navigation links -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td width="10px"></td>
+                        <td>
+                            <ul class="pagination">
+                                <li></li>
+                                <li class="active"></li>
+                                <li></li>
+                                <li class="li-last"></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table width="100%">
+                <tbody>
+                    <tr style="margin: 5px;">
+                        <td>
+                            <img src="../../public/images/Icons/motherboard.png" alt="" style="margin-left: 3rem; margin-top: 1rem;">
+                        </td>
+                        <td>
+                            <img src="../../public/images/Icons/procesador.png"  alt="" style="margin-left: 1rem; margin-top: 1rem;"> 
+                        </td>
+                    </tr>
+                    <tr style="margin: 5px;">
+                        <td>
+                            <img src="../../public/images/Icons/memoria-ram.png"  alt="" style="margin-left: 2rem; margin-top: 1rem;">
+                        </td>
+                        <td>
+                            <img src="../../public/images/Icons/placa-video.png"  alt="" style="margin-top: 1rem;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../../public/images/Icons/disco-duro.png"  alt="" style="margin-left: 2rem; margin-top: 1rem;">
+                        </td>
+                        <td>
+                            <img src="../../public/images/Icons/fuente.png"  alt="" style="margin-top: 1rem;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../../public/images/Icons/cooler.png"  alt="" style="margin-left: 2.5rem; margin-top: 1rem;">
+                        </td>
+                        <td>
+                            <img src="../../public/images/Icons/sistema.png"  alt="" style="margin-left: 1rem; margin-top: 1rem;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="../../public/images/Icons/gabinete.png"  alt="" style="margin-left: 2.5rem; margin-top: 1rem;">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+              </td></tr></tbody></table>
+            <!--/. Side navigation links -->
+            <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+            </div>
+            <div class="ps__rail-y" style="top: 0px; right: 0px;">
+                <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+            </div>
+        </ul>
+        <div class="sidenav-bg mask-strong" style="width: 240px;"></div>
+    </div>
+      <!--/. Sidebar navigation -->
+      <!-- Navbar -->
+      <nav class="navbar fixed-top navbar-toggleable-md navbar-expand-lg double-nav" style="padding-left: unset; background-color: var(--color1);">
+        <!-- SideNav slide-out button -->
+        <div class="float-left">
+            <a href="#" data-activates="slide-out" class="button-collapse" style="margin-right: 2rem;">
+                <i class="fa fa-bars" id="button-color"></i>
+            </a>
+        </div>
+        <!-- Breadcrumb-->
+        <div class="navbar-brand ml-lg-3">
+            <a href="/">Home</a>
+        </div>
+        <div class="navbar-brand ml-lg-3">
+            <a href="/users/profile">Mi cuenta</a>
+        </div>
+        <div class="navbar-brand ml-lg-3">
+            <a href="#">Ayuda</a>
+        </div>
+            <%- include("./partials/carrito.ejs") %> 
+      </nav>
+      <!-- /.Navbar -->
+    </header>
+    <!--/.Double navigation-->
+  
+    <!--Main Layout-->
+    <div class="container mt-3">
+
+        <div class="row">
+            <% for( let index = 0; index < productos.length; index++ ) { %>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <a href="/productos/<%= productos[index].id%>">
+                              <img class="card-img-top" src="/images/products/<%= productos[index].img %>" alt="">
+                            </a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="/productos/<%= productos[index].id%>">
+                                    <%= productos[index].name %>
+                                </a>
+                            </h4>
+                            <h5>$
+                                <%=productos[index].price %>
+                            </h5>
+                            <p class="card-text">
+                                <%= productos[index].description%>
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+        </div>
+    </div>
+    </main>
+    <!--Main Layout-->
+  
+  <script type="text/javascript" src="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.0/js/jquery.min.js"></script><script type="text/javascript" src="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.0/js/popper.min.js"></script><script type="text/javascript" src="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.0/js/bootstrap.min.js"></script><script type="text/javascript" src="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.0/js/mdb.min.js"></script><script type="text/javascript" src="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/bundles/4.19.0/compiled-addons.min.js"></script><script type="text/javascript" src="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/plugins/mdb-plugins-gathered.min.js"></script><script type="text/javascript">$(document).ready(function() {
+    $(".button-collapse").sideNav({
+      breakpoint: 1200
+    });
+      // SideNav Scrollbar Initialization
+      var sideNavScrollbar = document.querySelector('.custom-scrollbar');
+      var ps = new PerfectScrollbar(sideNavScrollbar);
+  });</script>
+  <script src="/javascripts/carrito.js"></script>
+  <div class="hiddendiv common"></div>
+  <div class="drag-target" style="left: 0px;"></div>
+  
+
+</body>
+</html>
