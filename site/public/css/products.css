@@ -14,7 +14,10 @@ body {
 .side-nav {
 margin-top: 45px !important;
 }
+.eliminar-producto{
+    color: black!important;
 
+}
 .double-nav .breadcrumb-dn p {
   color: #fff;
 }

@@ -32,13 +32,10 @@
           <li>
             <ul class="collapsible collapsible-accordion">
                 <li>
-                    <a class="collapsible-header waves-effect arrow-r">Mi cuenta</a>
+                    <a  href = "/users/profile" class="collapsible-header waves-effect arrow-r">Mi cuenta</a>
                 </li>
                 <li>
-                    <a class="collapsible-header waves-effect arrow-r">Modificar Datos</a>
-                </li>
-                <li>
-                    <a class="collapsible-header waves-effect arrow-r">Mis pedidos</a>
+                    <a href = "/users/profile/edit" class="collapsible-header waves-effect arrow-r">Modificar Datos</a>
                 </li>
                 <li>
                   <button class="btn btn-info" id="ingresar" type="submit">Cerrar sesion</button>
@@ -68,30 +65,33 @@
     <!--Main Layout-->
         <div class="max-resolution">
             <div class="formulario">
-                <form>
+              <form action="/users/profile?_method=PUT" method="POST" enctype="multipart/form-data">
                     <h1 class="info-title">Informacion personal</h1>
                     <div class="form-group">
                         <div>
                             <label for="exampleInputEmail1" class="nombre">Nombre</label>
-                            <input type="text" class="form-control" id="inputsFormulario" aria-describedby="emailHelp" placeholder="Nombre">
-                            <button id="editar" type="button" class="btn btn-secondary">Editar</a></button>
+                            <input type="text" class="form-control" name="fname" id="inputsFormulario" aria-describedby="emailHelp" placeholder="Nombre">
+                          
                         </div> 
                         <div class="form-control2">
                             <label for="exampleInputEmail1" class="nombre">Apellido</label>
-                            <input type="text" class="form-control" id="inputsFormulario" aria-describedby="emailHelp" placeholder="Apellido">
-                            <button id="editar" type="button" class="btn btn-secondary">Editar</a></button>
+                            <input type="text" class="form-control" name="lname" id="inputsFormulario" aria-describedby="emailHelp" placeholder="Apellido">
+                            
                         </div>
                         <div>
                             <label for="exampleInputEmail1" class="data-form">Correo electronico</label>
-                            <input type="email" class="form-control" id="inputsFormulario" aria-describedby="emailHelp" placeholder="fulanito@gmail.com">
-                            <button id="editar" type="button" class="btn btn-secondary">Editar</a></button>  
+                            <input type="email" class="form-control" name="email" id="inputsFormulario" aria-describedby="emailHelp" placeholder="fulanito@gmail.com">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1" id="contraseña" placeholder="Contraseña">Contraseña</label>
-                        <input type="password" class="form-control" id="inputsFormulario" placeholder="Contraseña">
-                        <button id="editar" type="button" class="btn btn-secondary">Editar</a></button>
+                        <input type="password" class="form-control" name="pass" id="inputsFormulario" placeholder="Contraseña">
                     </div>
+                    <div class="form-group" id="form-file">
+                      <label for="imgProduct">Agrega Imagen del Perfil</label>
+                      <input type="file" class="form-control-file" name="avatar">
+                  </div>
+                    <button id="editar" type="submit" class="btn btn-secondary">Editar</a></button>
                 </form>
             </div>
         </div>

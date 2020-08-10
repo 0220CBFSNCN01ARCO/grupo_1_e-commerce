@@ -12,6 +12,7 @@ var adminRouter = require('./routes/administrador');
 var userRouter = require('./routes/users');
 var apiRouterUser = require('./routes/api/ApiUser');
 var apiRouterProductos = require('./routes/api/ApiProductos');
+var apiRouterCarrito = require('./routes/api/carrito');
 var recordame = require('./middlewares/remMiddleware');
 
 
@@ -38,7 +39,7 @@ app.use('/admin', adminRouter);
 app.use('/users', userRouter);
 app.use('/api/users', apiRouterUser);
 app.use('/api/products',apiRouterProductos);
-
+app.use('/api/cart',apiRouterCarrito);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

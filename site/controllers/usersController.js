@@ -64,6 +64,34 @@ const UsersController = {
             return res.render('account', {user: req.session.usuarioLogueado });
         }
        return res.redirect("/users/login");
+    },
+    editProfileGet: function(req,res){
+        res.render('accountEdit', {user: req.session.usuarioLogueado });
+    },
+    editProfilePost:  function(req,res,next){
+        let user = req.session.usuarioLogueado.id;
+        let imagen = req.session.usuarioLogueado.avatar
+        if(req.files != undefined){
+             imagen = req.files[0].filename;
+        }
+        db.Users.update({
+            firstName: req.body.fname,
+            lastName: req.body.lname,
+            email: req.body.email,
+            password: bcrypt.hashSync(req.body.pass, 10),
+            avatar: imagen
+            
+        },{ 
+            where: {
+                id: user
+            }
+        });
+
+        return res.redirect('/');
+    },
+    logOUT: function(req,res){
+       req.session.destroy();
+       res.redirect("/");
     }
 }
 module.exports = UsersController; 

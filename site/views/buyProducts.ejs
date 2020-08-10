@@ -53,19 +53,18 @@
           <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
           <label class="custom-control-label" for="customRadio1">Otro metedo de pago</label>
         </div>
-        <button class="btn btn-info mt-4" id="ingresar" type="submit">Continuar</button>
+        <button class="btn btn-info mt-4" id="Comprar" type="button">Continuar</button>
       </div>
       <div class="col-md-6 mt-4">
         <div class="card" style="width: 18rem;">
           <img src="/images/products/product_2.jpg" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
+            <h5 id = "Titulo" class="card-title">Card title</h5>
+            <p id = "Texto" class="card-text"></p>
 
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Producto:</li>
-              <li class="list-group-item">Pagas:</li>
+              <li id = "PRODUCTOS" class="list-group-item">Unidades: </li>
+              <li id = "PAGA" class="list-group-item">Total: </li>
             </ul>
           </div>
         </div>
@@ -79,6 +78,7 @@
     </div>
     <!-- Copyright -->
   </footer>
+  <script src="/javascripts/buy.js"></script>
 </body>
 
 </html>

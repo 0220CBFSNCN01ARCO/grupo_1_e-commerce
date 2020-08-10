@@ -33,7 +33,7 @@
                         <h5>$ <%= producto.price + 3000 %></h4>
                         <div class="thinBorder"></div>
                         <i id="icono" class="fa fa-credit-card" aria-hidden="true"></i>
-                        <div class="dropdown">
+                        <div class="dropdown drop">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Seleccione su metodo de pago
@@ -46,7 +46,7 @@
                         </div>
 
                         <i id="icono" class="fas fa-truck" aria-hidden="true"></i>
-                        <div class="dropdown">
+                        <div class="dropdown drop">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Seleccione su metodo de envio
@@ -58,7 +58,7 @@
                             </div>
                         </div>
                         <td id="model-input">
-                            <input id="cantidad" type="number" class="form-control cantidad" min="1" value="2">
+                            <input id="cantidad" type="number" class="form-control cantidad" min="1" value="1">
                         </td>
                         <button id="comprar" type="button" class="btn btn-secondary">Comprar</a></button>
                         <button type="button" class="btn btn-secondary agregar-carrito" id="agregar-carrito" data-id="<%= producto.id %>">Agregar al carrito</button>

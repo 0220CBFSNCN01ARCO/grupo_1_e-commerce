@@ -43,6 +43,7 @@ router.post('/register',upload.any(),[
 
 ], UserController.RegisterPost);
 router.get('/profile', UserController.ProfileGet);
-router.get('/profile/edit');
-router.put('/profile');
+router.get('/profile/edit', UserController.editProfileGet);
+router.put('/profile',upload.any(), UserController.editProfilePost);
+router.get("/logout", UserController.logOUT);
 module.exports = router;

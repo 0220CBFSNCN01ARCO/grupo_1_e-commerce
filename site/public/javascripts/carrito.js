@@ -9,7 +9,10 @@ let listaCarrito = document.querySelector('#lista-carrito tbody');
 leerEventos();
 
 function leerEventos(){
- productos.addEventListener('click', agregarCarro);
+    if(productos !== null){
+        productos.addEventListener('click', agregarCarro);
+    }
+
  botonComprar.addEventListener('click', comprar);
  carrito.addEventListener('click', eliminarCurso);
  btnVaciar.addEventListener('click', vaciarCarrito);
@@ -37,6 +40,7 @@ function leerDatosProductos(producto){
      const infoProducto = {
          img: producto.querySelector('.imagen').src,
          titulo: producto.querySelector('#title-product').textContent,
+         cantidad: producto.querySelector('#cantidad').value,
          precio: producto.querySelector('#precio').textContent,
          id: producto.querySelector('#agregar-carrito').getAttribute('data-id')
      };
@@ -44,6 +48,8 @@ function leerDatosProductos(producto){
 };
 //Muestra los cursos en el carrito
 function agregarAlCarrito(producto) {
+       let splitPrecio = producto.precio.split(" ");
+       producto.precio = splitPrecio[1] * producto.cantidad;
        const row =document.createElement('tr');
        row.innerHTML = `
        <td>
@@ -53,7 +59,10 @@ function agregarAlCarrito(producto) {
        ${producto.titulo}
        </td>
        <td>
-       ${producto.precio}
+       ${producto.cantidad}
+       </td>
+       <td>
+        $ ${producto.precio} 
        </td>
        <td>
        <a href="#" style="color:black;" data-id="${producto.id}"><i class="fas fa-trash-alt eliminar-producto"></i></a>
@@ -86,11 +95,11 @@ function vaciarCarrito(){
 //Guardar producto en el local storage
 function guardarLocalStorage(producto){
     let productos;
-
     productos = obtenerProductoLocalStorage();
     productos.push(producto);
     localStorage.setItem('productos', JSON.stringify(productos));
 }
+
 
 function obtenerProductoLocalStorage(){
     let productosLS;
@@ -107,7 +116,7 @@ function mostrarProducto(){
     let productosLS;
     productosLS = obtenerProductoLocalStorage();
     productosLS.forEach(producto => {
-        const row =document.createElement('tr');
+       const row =document.createElement('tr');
        row.innerHTML = `
        <td>
            <img src="${producto.img}" width=100px>
@@ -116,10 +125,13 @@ function mostrarProducto(){
        ${producto.titulo}
        </td>
        <td>
-       ${producto.precio}
+       ${producto.cantidad}
        </td>
        <td>
-       <a href="#" data-id="${producto.id}"><i class="fas fa-trash-alt eliminar-producto"></i></a>
+        $ ${producto.precio} 
+       </td>
+       <td>
+       <a href="#" style="color:black;" data-id="${producto.id}"><i class="fas fa-trash-alt eliminar-producto"></i></a>
        </td>
        `;
        listaCarrito.appendChild(row);
